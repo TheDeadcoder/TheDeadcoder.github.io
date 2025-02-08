@@ -10,7 +10,7 @@
       university: {
         cgpa: {
           value: "3.80/4.00",
-          subtext: "Top 20 in Academic Performance"
+          subtext: "Among top 20% in Academic Performance"
         },
         deansList: {
           title: "Dean's List Scholar",
@@ -68,7 +68,7 @@
     };
 </script>
 
-<div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+<div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl font-bold text-white text-center mb-12 font-poppins">
             Education
@@ -81,6 +81,7 @@
                 <div>
                     <h2 class="text-2xl font-semibold text-white font-poppins">Bangladesh University of Engineering and Technology</h2>
                     <p class="text-lg text-white font-poppins">B.Sc. in Computer Science & Engineering</p>
+                    <p class="text-base text-white font-poppins">2020-Present</p>
                 </div>
             </div>
 
@@ -128,6 +129,7 @@
                 <div>
                     <h2 class="text-2xl font-semibold text-white font-poppins">Notre Dame College</h2>
                     <p class="text-lg text-white font-poppins">Higher Secondary Education</p>
+                    <p class="text-base text-white font-poppins">2017-2019</p>
                 </div>
             </div>
 
@@ -155,6 +157,7 @@
                 <div>
                     <h2 class="text-2xl font-semibold text-white font-poppins">Cumilla Zilla School</h2>
                     <p class="text-lg text-white font-poppins">Secondary Education</p>
+                    <p class="text-base text-white font-poppins">2011-2017</p>
                 </div>
             </div>
 

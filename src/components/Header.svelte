@@ -9,7 +9,7 @@
       { name: "Experiences ", link: "/experiences" },
       { name: "Achievements ", link: "/achievements" },
       { name: "Projects", link: "/projects" },
-      { name: "Skills & Certifications ", link: "/certifications" },
+      { name: "Skills & Certifications ", link: "/skill_certifications" },
       { name: "Blogs", link: "/blogs" },
     ];
   
