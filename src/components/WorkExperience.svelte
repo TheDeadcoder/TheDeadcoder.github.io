@@ -2,7 +2,12 @@
 <script>
     import { Fa } from 'svelte-fa';
     import { faCircle } from '@fortawesome/free-solid-svg-icons';
-    
+    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
+    let mounted = false;
+    onMount(() => {
+        mounted = true;
+    });
     export let experiences = [];
   </script>
   
@@ -11,8 +16,9 @@
         Work Experiences
     </h1>
 
-    {#each experiences as experience}
-      <div class="mb-12 last:mb-0">
+    {#each experiences as experience, i}
+     {#if mounted}
+      <div in:fly="{{ y: 50, duration: 500, delay: i * 100 }}" out:fade class="mb-12 last:mb-0">
         <!-- Company Header -->
         <div class="flex items-center gap-3 mb-6">
           {#if experience.logo}
@@ -59,6 +65,7 @@
           {/each}
         </div>
       </div>
+     {/if}
     {/each}
   </section>
   

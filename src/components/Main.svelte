@@ -1,5 +1,11 @@
 <script>
     import Step from "./Step.svelte";
+    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
+    let mounted = false;
+    onMount(() => {
+        mounted = true;
+    });
 
     let steps = [
         {
@@ -24,20 +30,30 @@
 
     let benefits = [
         {
+            name: "Balance between academics & skill-development",
+            description:
+                "I completed my Bachelor's degree at Computer Science and Engineering from BUET. I can describe my university life as a balance between academics and extra curricular activities. I am a very passionate competitive programmer. I love solving complex problems and break them down to simple tasks. I also participate in different hackathons and programming competitions and have achieved quite a few awards.",
+        },
+        {
             metric: "10x",
             name: "a self taught developer",
             description:
-                "I taught myself to code using free online resources and absolutely fell in love with the creativity and problem solving that is involved in developing and engineering innovative new online experiences. Starting of with JavaScript, HTML & CSS and evolving my knowledge base to include JavaScript frameworks, backend programming, design, cloud services and much much more.",
+                "I taught myself to code using free online resources and absolutely fell in love with the creativity and problem solving that is involved in developing and engineering innovative new online experiences. I've worked with languages like Sveltekit, TailwindCSS, TypeScript, Flutter, Java, C/C++, Python, and more. ",
         },
         {
-            name: "a product design & UX finatic",
+            name: "an AI-enthusiast",
             description:
-                "Carefully crafting and designing amazing user experiences allows me to express and experiment with every morsel of creativity I have. I love the challenge of learning new design concepts and enabling users with amazing online experiences.",
+                "I have been driven by the innovations and works in the field of Generative AI. So I focus on the field of AI and Machine Learning. I have been working on different projects leveraging the power of Gen AI, advanced RAG, Vector databases, Reinforcement learning, Sentiment analysis, Recommendation systems, and more. My interest in Gen AI and Deep learning has led me to dive into several exciting projects, hackathons & datathons, where I've tinkered with a variety of techs, architectures and pipelines",
         },
         {
             name: "an excellent communicator",
             description:
                 "Communication is key and it's a paramount value of mine. I believe in transparency and constructive communication above all else. This helps me develop deep relationships and ensures my effectiveness and productivity in any work space with any team.",
+        },
+        {
+            name: "Continuous learning & improvement",
+            description:
+                "My life motto is to be better than yesterday. I try to learn new things everyday. I like to keep up with the latest tech and programming news. I see problems as opportunities to learn and grow. I am always open to new ideas and suggestions.",
         },
     ];
 </script>
@@ -58,18 +74,18 @@
                 </p>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                My <span class="text-violet-400"> favorite tech</span> includes JavaScript
-                (NEXT.JS or SvelteKit), TailwindCSS, Node.js + Express.js & PostgreSQL
-                or Firebase/Firestore!
+                I have recently completed my Undergrad majoring in Computer Science & Engineering from Bangladesh University of Engineering & Technology (BUET)
             </p>
-            <button
-                class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
-            >
-                <div
-                    class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
-                />
-                <h4 class="relative z-9">Get in touch &rarr;</h4>
-            </button>
+            <a href="#connect">
+                <button
+                    class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950"
+                >
+                    <div
+                        class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+                    />
+                    <h4 class="relative z-9">Get in touch &rarr;</h4>
+                </button>
+            </a>
         </div>
         <div class="relative shadow-2xl grid place-items-center">
             <img
@@ -96,27 +112,10 @@
                 A bit <span class="poppins text-violet-400">about</span> me.
             </h3>
         </div>
-        <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
-            I am . . .
-        </p>
         <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
             {#each benefits as benefit, index}
-                <!-- <div class="flex flex-col gap-2 mx-auto">
-                    <div class="flex items-end gap-4">
-                        <p
-                            class="poppins text-6xl sm:text-7xl md:text-8xl text-slate-500 font-medium"
-                        >
-                            {benefit.metric}
-                        </p>
-                        <p
-                            class="text-xl sm:text-2xl md:text-3xl capitalize pb-2"
-                        >
-                            {benefit.name}
-                        </p>
-                    </div>
-                    <p class="text-center italic">- {benefit.description}</p>
-                </div> -->
-                <div class="flex gap-6 sm:gap-8">
+              {#if mounted}
+                <div in:fly="{{ y: 50, duration: 500, delay: index * 100 }}" out:fade class="flex gap-6 sm:gap-8">
                     <p
                         class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold"
                     >
@@ -129,74 +128,9 @@
                         <p>{benefit.description}</p>
                     </div>
                 </div>
+              {/if}
             {/each}
         </div>
-        <h5 class={" text-2xl sm:text-3xl font-semibold text-center poppins "}>
-            The <span class="text-violet-400">Complete</span> Package
-        </h5>
-        <div
-            class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full"
-        >
-            <table class="bg-white text-slate-700 rounded text-center">
-                <thead class={"border-b border-solid border-slate-200  "}>
-                    <tr class="">
-                        <th />
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #1</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #2</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #3</th>
-                        <th
-                            class="bg-violet-700 text-white whitespace-nowrap p-4 px-8"
-                            >Me</th
-                        >
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Dedication</td
-                        >
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Critical Thought</td
-                        >
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr>
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Interpersonal Skills</td
-                        >
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr class="border-t border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Progamming Ability</td
-                        >
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
-            <p>Scroll to see more &rarr;</p>
-        </div>
-        <p class="mx-auto">So why not invest?</p>
+        
     </section>
 </main>

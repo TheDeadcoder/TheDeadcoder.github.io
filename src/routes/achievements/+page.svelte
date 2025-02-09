@@ -160,7 +160,7 @@
                   <div in:fly={{ x: -50, duration: 500, delay: i * 200 }} out:fade>
                       <div class="flex items-center mb-3 sm:mb-4 relative">
                           <div
-                              class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center text-base sm:text-lg md:text-xl font-bold text-white shadow-lg z-10"
+                              class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center text-base sm:text-lg md:text-xl font-bold text-white shadow-lg"
                           >
                               {yearGroup.year}
                           </div>

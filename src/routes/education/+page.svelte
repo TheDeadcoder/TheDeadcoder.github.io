@@ -1,11 +1,16 @@
 <!-- src/routes/education/+page.svelte -->
 <script>
     import Fa from 'svelte-fa';
+    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
     import { faGraduationCap, faTrophy, faMedal, faAward, faScroll, faFileAlt } from '@fortawesome/free-solid-svg-icons';
     import buet_logo from "$lib/logos/buet.svg";
     import ndc from "$lib/logos/ndc.svg";
     import czs from "$lib/logos/czs.svg";
-
+    let mounted = false;
+    onMount(() => {
+        mounted = true;
+    });
     const achievements = {
       university: {
         cgpa: {
@@ -73,9 +78,10 @@
         <h1 class="text-4xl font-bold text-white text-center mb-12 font-poppins">
             Education
         </h1>
-
+        
+        {#if mounted}
         <!-- University Section -->
-        <div class="mb-16 p-6">
+        <div in:fly="{{ y: 50, duration: 500, delay: 1 * 100 }}" out:fade class="mb-16 p-6" >
             <div class="flex items-center space-x-4 mb-8">
                 <img src={buet_logo} alt="BUET Logo" class="w-16 h-16" />
                 <div>
@@ -123,7 +129,7 @@
         </div>
 
         <!-- College Section -->
-        <div class="mb-16 p-6">
+        <div in:fly="{{ y: 50, duration: 500, delay: 2 * 100 }}" out:fade class="mb-16 p-6">
             <div class="flex items-center space-x-4 mb-8">
                 <img src={ndc} alt="Notre Dame College Logo" class="w-16 h-16" />
                 <div>
@@ -151,7 +157,7 @@
         </div>
 
         <!-- School Section with similar tree structure -->
-        <div class="p-6">
+        <div in:fly="{{ y: 50, duration: 500, delay: 3 * 100 }}" out:fade class="p-6">
             <div class="flex items-center space-x-4 mb-8">
                 <img src={czs} alt="Cumilla Zilla School Logo" class="w-16 h-16" />
                 <div>
@@ -177,5 +183,6 @@
                 {/each}
             </div>
         </div>
+        {/if}
     </div>
 </div>
