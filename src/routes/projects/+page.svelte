@@ -126,7 +126,7 @@
   </script>
   
   <svelte:head>
-      <title>Projects - Saad Mohammad Rafid Pial</title>
+      <title>Projects - Nazmus Sakib</title>
   </svelte:head>
   
   <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">

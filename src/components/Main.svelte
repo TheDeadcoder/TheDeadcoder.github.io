@@ -57,7 +57,9 @@
         },
     ];
 </script>
-
+<svelte:head>
+    <title>Home - Nazmus Sakib</title>
+</svelte:head>
 <main class="flex flex-col flex-1 p-4">
     <section
         id="about"

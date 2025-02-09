@@ -73,5 +73,7 @@
       }
     ];
   </script>
-  
+  <svelte:head>
+    <title>Experiences - Nazmus Sakib</title>
+  </svelte:head>
   <WorkExperience experiences={experienceData} />

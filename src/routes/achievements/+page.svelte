@@ -145,7 +145,7 @@
 </script>
 
 <svelte:head>
-	<title>Competitions - Nazmus Sakib</title>
+	<title>Achievements - Nazmus Sakib</title>
 </svelte:head>
 
 <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
