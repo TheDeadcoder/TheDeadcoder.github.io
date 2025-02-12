@@ -333,7 +333,7 @@
 	</div>
 </div>
   
-  <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+  <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8" id="Certifications">
     <h1 class="text-4xl font-bold mb-12 text-center text-white font-poppins">
         My Certifications
     </h1>
