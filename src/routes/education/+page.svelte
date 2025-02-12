@@ -3,7 +3,7 @@
     import Fa from 'svelte-fa';
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
-    import { faGraduationCap, faTrophy, faMedal, faAward, faScroll, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+    import { faGraduationCap, faTrophy, faMedal, faAward, faScroll, faFileAlt,faBook } from '@fortawesome/free-solid-svg-icons';
     import buet_logo from "$lib/logos/buet.svg";
     import ndc from "$lib/logos/ndc.svg";
     import czs from "$lib/logos/czs.svg";
@@ -71,6 +71,24 @@
         ]
       }
     };
+    let notableCourses = {
+        columnOne: [
+            { code: "CSE 305", name: "Computer Architecture" },
+            { code: "CSE 307", name: "Software Engineering" },
+            { code: "CSE 309", name: "Compiler Design" },
+            { code: "CSE 313", name: "Operating Systems" },
+            { code: "CSE 317", name: "Artificial Intelligence" },
+            { code: "CSE 321", name: "Computer Networks" },
+        ],
+        columnTwo: [
+            { code: "CSE 405", name: "Computer Security" },
+            { code: "CSE 409", name: "Computer Graphics" },
+            { code: "CSE 463", name: "Introduction to Bioinformatics" },
+            { code: "CSE 471", name: "Machine Learning" },
+            { code: "MATH 245", name: "Statistics and Probability" },
+            { code: "MATH 247", name: "Linear Algebra" },
+        ]
+    };
 </script>
 <svelte:head>
     <title>Education - Nazmus Sakib</title>
@@ -106,7 +124,7 @@
                 </div>
 
                 <!-- Dean's List Branch -->
-                <div class="border-l-2 border-blue-500 pl-8 relative">
+                <div class="border-l-2 border-blue-500 pl-8 pb-8 relative">
                     <div class="absolute -left-[6px] top-0 w-3 h-3 rounded-full bg-blue-500"></div>
                     <div class="flex items-center space-x-3 mb-4">
                         <Fa icon={faScroll} class="text-blue-500" />
@@ -125,6 +143,40 @@
                                 </a>
                             </div>
                         {/each}
+                    </div>
+                    
+                </div>
+                <div class="border-l-2 border-blue-500 pl-8 pb-6 relative">
+
+                    <div class="absolute -left-[6px] top-0 w-3 h-3 rounded-full bg-blue-500"></div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <Fa icon={faBook} class="text-blue-500" />
+                        <span class="text-white font-semibold text-xl font-poppins">Notable Courses</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 ml-7">
+                        <!-- Column One -->
+                        <div class="space-y-3">
+                            {#each notableCourses.columnOne as course}
+                                <div class="flex items-center space-x-2 relative group">
+                                    <div class="absolute -left-[22px] top-[10px] w-4 h-[2px] bg-blue-500"></div>
+                                    <div class="text-gray-300 font-poppins group-hover:text-blue-400 transition-colors">
+                                        <span class="text-blue-400">{course.code}</span> - {course.name}
+                                    </div>
+                                </div>
+                            {/each}
+                        </div>
+                        
+                        <!-- Column Two -->
+                        <div class="space-y-3">
+                            {#each notableCourses.columnTwo as course}
+                                <div class="flex items-center space-x-2 relative group">
+                                    <div class="absolute -left-[22px] top-[10px] w-4 h-[2px] bg-blue-500"></div>
+                                    <div class="text-gray-300 font-poppins group-hover:text-blue-400 transition-colors">
+                                        <span class="text-blue-400">{course.code}</span> - {course.name}
+                                    </div>
+                                </div>
+                            {/each}
+                        </div>
                     </div>
                 </div>
             </div>
