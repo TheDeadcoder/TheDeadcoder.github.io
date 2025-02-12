@@ -22,7 +22,7 @@
         event: "KUET-BITFEST Hackathon - 2025",
         logo: tokkhok,
         demo: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//BUET_GENESIS.pdf",
-        link: "https://github.com/yoboBUETGenesis"
+        link: "https://github.com/TheDeadcoder/Tokkhok-Backend"
       }, 
       {
         name: "InsightAI",
