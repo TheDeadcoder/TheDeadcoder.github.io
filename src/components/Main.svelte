@@ -2,31 +2,13 @@
     import Step from "./Step.svelte";
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
+    import Fa from 'svelte-fa';
+    import { faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
+    import resume from '$lib/assets/resume.pdf';
     let mounted = false;
     onMount(() => {
         mounted = true;
     });
-
-    let steps = [
-        {
-            name: "Smoljames Store",
-            icon: "fa-solid fa-cart-shopping",
-            description:
-                "Smoljames Store is a a merchanising store created with Next.js, Commerce.js & Stripe! Commerce.js is a CMS for managing project and Stripe is used for all transaction handling.",
-        },
-        {
-            name: "Utlimate Todos",
-            icon: "fa-solid fa-list-check",
-            description:
-                "Test for model robustness with customized test profiles and receive exhaustive reporting on the performance and potential vulnerabilities of your model.",
-        },
-        {
-            name: "Pokédex",
-            icon: "fa-solid fa-diagram-project",
-            description:
-                "Augment your datasets with our filters and dataset manipulations to ensure your models are trained on the highest quality datasets (coming soon).",
-        },
-    ];
 
     let benefits = [
         {
@@ -134,5 +116,84 @@
             {/each}
         </div>
         
+    </section>
+    <section id="resume" class="py-20 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4">
+            <h6 class="text-large sm:text-xl md:text-2xl">
+                Check out my credentials
+            </h6>
+            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl poppins">
+                My <span class="text-violet-400">Resume</span>
+            </h3>
+        </div>
+    
+        <!-- Resume Container -->
+        {#if mounted}
+        <div 
+            in:fly="{{ y: 50, duration: 500 }}" 
+            out:fade 
+            class="max-w-[1000px] mx-auto w-full px-4"
+        >
+            <!-- Resume Preview Container -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="relative aspect-[8.5/11] w-full">
+                    <iframe
+                        src={resume}
+                        title="Resume Preview"
+                        class="absolute inset-0 w-full h-full"
+                        style="pointer-events: none;"
+                    ></iframe>
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-white to-transparent"></div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center p-6 bg-white">
+                    <a 
+                        href={resume} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 px-6 py-3 rounded-full bg-violet-500 text-white hover:bg-violet-600 transition-colors duration-200"
+                    >
+                        <Fa icon={faEye} />
+                        <span class="poppins">View Full Resume</span>
+                    </a>
+                    
+                    <a 
+                        href={resume} 
+                        download
+                        class="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-violet-500 text-violet-500 hover:bg-violet-50 transition-colors duration-200"
+                    >
+                        <Fa icon={faDownload} />
+                        <span class="poppins">Download PDF</span>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Resume Highlights -->
+            <!-- <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {#each ['Education', 'Experience', 'Skills'] as highlight, index}
+                <div 
+                    in:fly="{{ y: 50, duration: 500, delay: index * 100 }}"
+                    class="p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-200"
+                >
+                    <h4 class="text-xl font-semibold mb-3 poppins text-violet-500">{highlight}</h4>
+                    <div class="w-12 h-1 bg-violet-400 mb-4"></div>
+                    <p class="text-slate-600">
+                        {#if highlight === 'Education'}
+                            BUET - Bachelor's in Computer Science and Engineering
+                        {:else if highlight === 'Experience'}
+                            Full Stack Development • AI/ML Projects • Competitive Programming
+                        {:else}
+                            Python • JavaScript • TypeScript • Svelte • React • TailwindCSS
+                        {/if}
+                    </p>
+                </div>
+                {/each}
+            </div> -->
+        </div>
+        {/if}
     </section>
 </main>
