@@ -14,8 +14,12 @@
     const achievements = {
       university: {
         cgpa: {
-          value: "3.80/4.00",
-          subtext: "Among top 20% in Academic Performance"
+          value: "3.82/4.00",
+          subtext: "Among top 20% in Academic Performance",
+          perfect: {
+            value: "4.00/4.00 in the final Semester",
+            result_url:"https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//result.png"
+          }
         },
         deansList: {
           title: "Dean's List Scholar",
@@ -107,7 +111,7 @@
                 <div>
                     <h2 class="text-2xl font-semibold text-white font-poppins">Bangladesh University of Engineering and Technology</h2>
                     <p class="text-lg text-white font-poppins">B.Sc. in Computer Science & Engineering</p>
-                    <p class="text-base text-white font-poppins">2020-Present</p>
+                    <p class="text-base text-white font-poppins">2020-2025</p>
                 </div>
             </div>
 
@@ -121,6 +125,9 @@
                         <span class="text-white font-semibold font-poppins">CGPA: {achievements.university.cgpa.value}</span>
                     </div>
                     <p class="text-gray-300 ml-7 font-poppins">{achievements.university.cgpa.subtext}</p>
+                    <a href={achievements.university.cgpa.perfect.result_url} class="text-blue-400 hover:text-blue-300 transition-colors ml-7 mt-2 inline-block font-poppins">
+                        Perfect CGPA in Last Semester
+                    </a>
                 </div>
 
                 <!-- Dean's List Branch -->

@@ -110,12 +110,28 @@
     ];
   
     let visibleProjects = [];
+
+    function preloadImages() {
+        const imagePromises = projects.map(project => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = resolve;
+                img.onerror = resolve; // Still resolve on error to not block loading
+                img.src = project.logo;
+            });
+        });
+
+        return Promise.all(imagePromises);
+    }
   
     onMount(() => {
-      setTimeout(() => {
-            isLoading = false;
-            visibleProjects = projects.map(p => p.name);
-        }, 1500);
+      preloadImages().then(() => {
+            
+            setTimeout(() => {
+                isLoading = false;
+                visibleProjects = projects.map(p => p.name);
+            }, 1500);
+        });
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
