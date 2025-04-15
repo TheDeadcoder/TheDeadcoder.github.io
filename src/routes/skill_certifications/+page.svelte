@@ -226,6 +226,13 @@
         logo: cdeep,
         link: "https://coursera.org/share/51eaf3162114dd12932cda8a8ac9cdbb"
       },
+	  {
+        name: "Hugging Face AI Agent Course",
+        technologies: ["AI-Agent", "Smolagent", "LangChain", "LangGraph", "Agentic RAG", "LLamaIndex", "Hugging Face Hub", "Multi-Agent Workflows"],
+        description: "AI Agent Course by Hugging Face. This course covers the concepts and tools required to understand, evaluate, and implement AI agents.",
+        logo: huggingface,
+        link: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//hg_agent.png"
+      },
       {
         name: "The Complete Javascript Course",
         technologies: ["JavaScript", "ES6", "DOM Manipulation", "OOP", "Asynchronous JavaScript", "AJAX", "APIs", "NPM", "Webpack", "Parcel"],

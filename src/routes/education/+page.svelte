@@ -70,7 +70,7 @@
           {
             title: "Talentpool Scholarship",
             description: "Got Talentpool Scholarship in SSC (Board Position: 1st), JSC (Board Position: 8th) and PSC",
-            certificateUrl: "#"
+            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//ssc_result.pdf#page=3"
           }
         ]
       }
