@@ -13,9 +13,19 @@
     import nerd from '$lib/logos/nerd.svg';
     import huggingface from '$lib/logos/huggingface.svg';
     import secu from "$lib/logos/secu.svg";
+    import civilgpt from "$lib/logos/civilgpt.svg"
     let isLoading = true;
   
     const projects = [
+      {
+        name: "CivilGPT",
+        technologies: ["FastAPI", "OpenAI API", "Neo4j Graph database", "Qdrant Vector Database", "Authentication", "Supabase", "Alembic", "Postgres", "SQLAlchemy", "sveltekit", "shadcn"],
+        description: "It is a project developed for helping civil engineers with the power of AI. It implements advanced graph RAG and agentic retrieval system for answering queries about building codes. It generates site report with AI from images captured. The project is ongoing. Currently working on betterment of site report generation, better image analysis",
+        event: "Personal Project",
+        logo: civilgpt,
+        demo: "https://civilmate.vercel.app/",
+        link: ""
+      }, 
       {
         name: "তক্ষক",
         technologies: ["FastAPI", "OpenAI API", "google-transliterate-API", "Qdrant Vector Database", "Authentication", "Supabase", "Alembic", "Postgres", "SQLAlchemy"],
