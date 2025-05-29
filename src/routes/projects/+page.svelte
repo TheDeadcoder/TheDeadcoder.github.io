@@ -18,7 +18,7 @@
   
     const projects = [
       {
-        name: "CivilGPT",
+        name: "CivilMate",
         technologies: ["FastAPI", "OpenAI API", "Neo4j Graph database", "Qdrant Vector Database", "Authentication", "Supabase", "Alembic", "Postgres", "SQLAlchemy", "sveltekit", "shadcn"],
         description: "It is a project developed for helping civil engineers with the power of AI. It implements advanced graph RAG and agentic retrieval system for answering queries about building codes. It generates site report with AI from images captured. The project is ongoing. Currently working on betterment of site report generation, better image analysis",
         event: "Personal Project",

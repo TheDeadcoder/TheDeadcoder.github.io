@@ -72,6 +72,8 @@
     import langchain from '$lib/logos/langchain.svg';
     import firebase from 'devicon/icons/firebase/firebase-original.svg';
     import cloudflare from 'devicon/icons/cloudflare/cloudflare-original.svg';
+    import jest from 'devicon/icons/jest/jest-plain.svg';
+    import nextjs from 'devicon/icons/nextjs/nextjs-original.svg';
 
 	import { quintOut } from 'svelte/easing';
 
@@ -124,7 +126,10 @@
         "Jira": {type:'devicon', icon: jira },
         "Trello": {type:'devicon', icon: trello },
         "Figma": {type:'devicon', icon: figma },
-		SQLAlchemy: { type: 'devicon', icon: sqlalchemyIcon }
+		SQLAlchemy: { type: 'devicon', icon: sqlalchemyIcon },
+    jest:{ type: 'devicon', icon: jest },
+    Nextjs: { type: 'devicon', icon: nextjs },
+    pgvector: { type: 'devicon', icon: postgresqlIcon },
 	};
 
 	const skillCategories = [
@@ -153,13 +158,14 @@
 			skills: [
 				'React',
 				'Svelte/Sveltekit',
+        'Nextjs'
 			]
 		},
 		{
 			name: 'Data Systems',
 			icon: faDatabase,
 			color: 'bg-yellow-500',
-			skills: ['PostgreSQL', 'MySQL', 'Oracle', 'Supabase','SQLAlchemy', 'drizzle', "Qdrant", "Chroma", "Redis"]
+			skills: ['PostgreSQL', 'MySQL', 'Oracle', 'Supabase','SQLAlchemy', 'drizzle', "Qdrant", "Chroma", "Redis", "pgvector"]
 		},
 		{
 			name: 'Mobile',
@@ -171,7 +177,7 @@
 			name: 'Tools',
 			icon: faTools,
 			color: 'bg-purple-500',
-			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase"]
+			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase", "jest"]
 		},
 		{
 			name: 'Soft Skills',
