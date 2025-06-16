@@ -13,7 +13,7 @@
         roles: [
           {
             title: 'Junior Software Engineer',
-            period: 'June 2024 - Present',
+            period: 'June 2024 - Dec 2024',
             location: 'Dhaka, Bangladesh',
             achievements: [
               'Created a CRM application for better data-warehousing & user-management across different platforms of Priyo. Did REST API Development in Django, PostgreSQL. Used Docker for containerization, NGINX as Proxy-server in deployment, and integrated CI/CD pipeline. Implemented Supabase & Priyo-auth for authentication and authorization. Used Metabase for data visualization and analysis. Implemented Dynamic Email campaigning using SendGrid.',
@@ -30,7 +30,7 @@
         roles: [
           {
             title: 'Founding Engineer & Fullstack Developer',
-            period: 'Mar 2024 - Dec 2024',
+            period: 'Mar 2024 - Mar 2025',
             location: 'Dhaka, Bangladesh',
             achievements: [
               'Developed an AI powered application aimed at serving customers with their banking-related queries. Used different LLM models, Hybrid-indexing, Vector database, Agentic RAG architectures for Leveraging Query performance on Bank\'s Public Data, Users\' Personalized queries and human involvement. Used Keycloak for Authprization, Supabase for authentication, and Metabase for data visualization.',

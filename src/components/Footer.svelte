@@ -25,7 +25,7 @@
   
     const contactInfo = [
       { icon: faEnvelope, text: "sakibbuet2k19@gmail.com", href: "mailto:sakibbuet2k19@gmail.com" },
-      { icon: faPhone, text: "+880 175 994 8779", href: "tel:+8801759948779" },
+      { icon: faPhone, text: "+880*********", href: "tel:+880**********" },
       { icon: faLocationDot, text: "Dhaka, Bangladesh", href: "#" }
     ];
   
