@@ -10,7 +10,7 @@
       { name: "Achievements ", link: "/achievements" },
       { name: "Projects", link: "/projects" },
       { name: "Skills & Certifications ", link: "/skill_certifications" },
-      { name: "Research & Blogs", link: "/research_blogs" },
+      { name: "Research", link: "/research_blogs" },
     ];
   
     let isMenuOpen = false;
