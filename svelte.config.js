@@ -23,6 +23,9 @@ const config = {
     }),
     paths: {
       base: process.env.NODE_ENV === 'production' ? '' : '', // Set base path for GitHub Pages
+    },
+    prerender: {
+      entries: ['*', '/sitemap.xml'] 
     }
   },
   preprocess: vitePreprocess()
