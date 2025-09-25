@@ -4,7 +4,7 @@
     import { fade, fly } from 'svelte/transition';
     import Fa from 'svelte-fa';
     import { faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
-    import resume from '$lib/assets/resume_1.pdf';
+    import resume from '$lib/assets/resume.pdf';
     let mounted = false;
     onMount(() => {
         mounted = true;
@@ -58,7 +58,7 @@
                 </p>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                I have recently completed my Undergrad majoring in Computer Science & Engineering from Bangladesh University of Engineering & Technology (BUET)
+                I have completed my Undergrad majoring in Computer Science & Engineering from Bangladesh University of Engineering & Technology (BUET)
             </p>
             <a href="#connect">
                 <button

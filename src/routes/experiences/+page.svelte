@@ -5,7 +5,25 @@
     import buet from "$lib/logos/buet.svg";
     import oleyn from "$lib/logos/oleyn.svg";
     import yobo from "$lib/logos/yobo.svg";
+    import sluqe from "$lib/logos/sluqe.svg";
     const experienceData = [
+      {
+        company: 'Sluqe',
+        logo: sluqe,
+        url: "https://www.sluqe.com/",
+        roles: [
+          {
+            title: 'Software Engineer',
+            period: 'May 2025 - Present',
+            location: 'Warszawa, Poland (Remote)',
+            achievements: [
+              'Web Application Development for Sluqe - a platform to capture and organize peoples\'s fleeting ideas by recording and transcribing their spoken thoughts. AI chatbot, WYSIWYG editor, Subscription-based payment system in stripe',
+              'Firebase cloud functions for backend services, Firestore for database, Composite indexing for vector database. Used Genkit, Instructor AI and other frameworks for LLMs. Used React mail and Resend for email services. Jest for testing.',
+              'Mobile Application development using Flutter.'
+            ]
+          }
+        ]
+      },
       {
         company: 'Priyo',
         logo: priyo_logo,
