@@ -4,15 +4,6 @@
     // import Icon from 'svelte-awesome';
     import Icon from 'svelte-awesome';
 	import {
-		faJava,
-		faPython,
-		faJs,
-		// faReact,
-		faNodeJs,
-		faDocker,
-		faGit
-	} from '@fortawesome/free-brands-svg-icons';
-	import {
 		faCode,
 		faServer,
 		faDatabase,
@@ -31,7 +22,6 @@
 	} from '@fortawesome/free-solid-svg-icons';
 
 	// Add Devicon imports
-	import cIcon from 'devicon/icons/c/c-original.svg';
 	import cppIcon from 'devicon/icons/cplusplus/cplusplus-original.svg';
 	import javaIcon from 'devicon/icons/java/java-original.svg';
 	import pythonIcon from 'devicon/icons/python/python-original.svg';
@@ -74,6 +64,7 @@
     import cloudflare from 'devicon/icons/cloudflare/cloudflare-original.svg';
     import jest from 'devicon/icons/jest/jest-plain.svg';
     import nextjs from 'devicon/icons/nextjs/nextjs-original.svg';
+    import pytorch from 'devicon/icons/pytorch/pytorch-original.svg';
 
 	import { quintOut } from 'svelte/easing';
 
@@ -130,6 +121,7 @@
     jest:{ type: 'devicon', icon: jest },
     Nextjs: { type: 'devicon', icon: nextjs },
     pgvector: { type: 'devicon', icon: postgresqlIcon },
+    PyTorch: { type: 'devicon', icon: pytorch },
 	};
 
 	const skillCategories = [
@@ -167,11 +159,11 @@
 			color: 'bg-yellow-500',
 			skills: ['PostgreSQL', 'MySQL', 'Oracle', 'Supabase','SQLAlchemy', 'drizzle', "Qdrant", "Chroma", "Redis", "pgvector"]
 		},
-		{
-			name: 'Mobile',
-			icon: faMobileAlt,
-			color: 'bg-red-500',
-			skills: ['Flutter']
+    {
+			name: 'AI & ML',
+			icon: faSolidLightbulb,
+			color: 'bg-indigo-500',
+			skills: ['Machine Learning', 'PyTorch', 'OpenCV', 'Natural Language Processing', 'Retrieval-Augmented Generation (RAG)', 'scikitlearn', "YOLO", "Fine-Tuning (PEFT & LORA)", "LLamaIndex", "LangChain"]
 		},
 		{
 			name: 'Tools',
@@ -186,10 +178,10 @@
 			skills: ['Critical Thinking', 'Problem Solving', 'Team Player', 'Jira', 'Trello', 'Figma']
 		},
 		{
-			name: 'AI & ML',
-			icon: faSolidLightbulb,
-			color: 'bg-indigo-500',
-			skills: ['Machine Learning', 'OpenCV', 'Natural Language Processing', 'Retrieval-Augmented Generation (RAG)', 'scikitlearn', "YOLO", "Fine-Tuning (PEFT & LORA)", "LLamaIndex", "LangChain"]
+			name: 'Mobile',
+			icon: faMobileAlt,
+			color: 'bg-red-500',
+			skills: ['Flutter']
 		},
 		{
 			name: 'Competitive',
@@ -226,6 +218,13 @@
         link: "https://coursera.org/share/fa2ef1ba4d66870b112577f7301d330a"
       },
       {
+        name: "PyTorch for Deep Learning",
+        technologies: ["PyTorch", "Torchvision", "Neural Networks", "CNN", "RNN", "Transfer Learning", "Optuna", "Lightning", "ONNX", "MLOps", "Stable Diffusion", "Pruning", "Quantization", "Transformers", "Interpretability"],
+        description: "PyTorch for Deep Learning Professional Certificate by DeepLearning.AI. This course covers the concepts and tools required to understand, evaluate, and implement deep learning algorithms using PyTorch.",
+        logo: cdeep,
+        link: "https://coursera.org/share/beae38e6d59a2427c2e8d539b7779250"
+      },
+      {
         name: "Generative AI with Large Language Models",
         technologies: ["Generative AI", "LLM", "Prompting and prompt engineering", "Fine-tuning", "PEFT", "LoRA", "RLHF", "ReAct", "Program-aided language models (PAL)", "Scaling"],
         description: "Generative AI with Large Language Models by OpenAI. This course covers the concepts and tools required to understand, evaluate, and implement generative AI applications.",
@@ -245,13 +244,6 @@
         description: "The Complete Javascript Course by Udemy. This course covers the concepts and tools required to understand, evaluate, and implement JavaScript applications.",
         logo: udemy,
         link: "https://www.udemy.com/certificate/UC-f19c5a86-ebd9-4d61-a0d4-7130c8bb8ce5/"
-      },
-      {
-        name: "PyTorch for Deep Learning Bootcamp",
-        technologies: ["PyTorch", "Deep Learning"],
-        description: "PyTorch for Deep Learning Bootcamp by Udemy. This course covers the concepts and tools required to understand, evaluate, and implement deep learning algorithms using PyTorch.",
-        logo: udemy,
-        link: "#"
       },
       {
         name: "Django Specialization",
