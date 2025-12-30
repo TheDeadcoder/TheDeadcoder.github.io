@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
     // import Icon from 'svelte-awesome';
-    import { faCode, faCalendar, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+    import unsloth from '$lib/logos/unsloth.svg';
   
     import bdehr from '$lib/logos/bdehr.png';
     import coderhub from '$lib/logos/coderhub.png';
@@ -17,6 +17,15 @@
     let isLoading = true;
   
     const projects = [
+      {
+        name: "medical-cot-assistant",
+        technologies: ["unsloth", "llama.cpp", "transformers","huggingface", "llm-as-a-judge", "rocm", "supervised finetuning" ],
+        description: "This project fine-tunes a 20B parameter language model on curated medical reasoning datasets to create a clinical assistant capable of chain-of-thought (CoT) reasoning. The pipeline includes: Merging and formatting multiple medical QA datasets, LoRA-based fine-tuning with Unsloth,  INT4 weight quantization for efficient deployment, GGUF Export, LLM-as-a-Judge Evaluation",
+        event: "Personal Project",
+        logo: unsloth,
+        demo: "https://www.youtube.com/watch?v=IGAzB2DXqoM",
+        link: "https://github.com/TheDeadcoder/medical-cot-assistant?tab=readme-ov-file"
+      }, 
       {
         name: "CivilMate",
         technologies: ["FastAPI", "OpenAI API", "Neo4j Graph database", "Qdrant Vector Database", "Authentication", "Supabase", "Alembic", "Postgres", "SQLAlchemy", "sveltekit", "shadcn"],
