@@ -4,7 +4,7 @@
     import { fade, fly } from 'svelte/transition';
     import Fa from 'svelte-fa';
     import { faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
-    import resume from '$lib/assets/resume_1.pdf';
+    const resume = '/cv.pdf';
     let mounted = false;
     onMount(() => {
         mounted = true;
