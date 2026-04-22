@@ -67,6 +67,10 @@
     import pytorch from 'devicon/icons/pytorch/pytorch-original.svg';
     import unsloth from '$lib/logos/unsloth.svg';
     import llamacpp from '$lib/logos/llamacpp.svg';
+    import vllm from '$lib/logos/vllm.svg';
+    import rocm from '$lib/logos/rocm.svg';
+    import grpo from '$lib/logos/grpo.svg';
+    import trl from '$lib/logos/trl.svg';
 
 	import { quintOut } from 'svelte/easing';
 
@@ -125,6 +129,10 @@
     PyTorch: { type: 'devicon', icon: pytorch },
     Unsloth: { type: 'devicon', icon: unsloth },
     "llama.cpp": { type: 'devicon', icon: llamacpp },
+    "vLLM": { type: 'devicon', icon: vllm },
+    "ROCm": { type: 'devicon', icon: rocm },
+    "GRPO": { type: 'devicon', icon: grpo },
+    "TRL": { type: 'devicon', icon: trl },
 	};
 
 	const skillCategories = [
@@ -166,13 +174,13 @@
 			name: 'AI & ML',
 			icon: faSolidLightbulb,
 			color: 'bg-indigo-500',
-			skills: ['PyTorch', 'OpenCV', 'Natural Language Processing', 'Unsloth', 'Retrieval-Augmented Generation (RAG)', 'llama.cpp','scikitlearn', "YOLO", "Fine-Tuning (PEFT & LORA)", "LLamaIndex", "LangChain"]
+			skills: ['PyTorch', 'OpenCV', 'Natural Language Processing', 'Unsloth', 'vLLM', 'Retrieval-Augmented Generation (RAG)', 'llama.cpp','scikitlearn', "YOLO", "Fine-Tuning (PEFT & LORA)", "GRPO", "TRL", "LLamaIndex", "LangChain"]
 		},
 		{
 			name: 'Tools',
 			icon: faTools,
 			color: 'bg-purple-500',
-			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase", "jest"]
+			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase", "jest", "ROCm"]
 		},
 		{
 			name: 'Soft Skills',

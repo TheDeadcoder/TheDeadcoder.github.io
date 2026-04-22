@@ -14,11 +14,21 @@
     import huggingface from '$lib/logos/huggingface.svg';
     import secu from "$lib/logos/secu.svg";
     import civilgpt from "$lib/logos/civilgpt.svg"
+    import pytorch from 'devicon/icons/pytorch/pytorch-original.svg';
     let isLoading = true;
   
     const projects = [
       {
-        name: "medical-cot-assistant",
+        name: "DC-Ops-assistant",
+        technologies: ["unsloth", "TRL", "vLLM", "GRPO", "OpenEnv", "transformers", "huggingface", "llm-as-a-judge", "rocm", "supervised finetuning" ],
+        description: "Making a physics-grounded RL training pipeline for datacenter operations. DC-Ops is high-fidelity datacenter simulation environment for training LLM agents as datacenter operators, built on Meta's OpenEnv framework. The project includes: generating synthetic training data using large Teacher model, supervise fine-tuning a 7B parameter language model with Unsloth, optimizing it further with GRPO",
+        event: "Personal Project",
+        logo: pytorch,
+        demo: "https://huggingface.co/spaces/Melikshah/dc_ops_env",
+        link: "https://github.com/TheDeadcoder/dc_ops_training"
+      }, 
+      {
+        name: "Medical-CoT-assistant",
         technologies: ["unsloth", "llama.cpp", "transformers","huggingface", "llm-as-a-judge", "rocm", "supervised finetuning" ],
         description: "This project fine-tunes a 20B parameter language model on curated medical reasoning datasets to create a clinical assistant capable of chain-of-thought (CoT) reasoning. The pipeline includes: Merging and formatting multiple medical QA datasets, LoRA-based fine-tuning with Unsloth,  INT4 weight quantization for efficient deployment, GGUF Export, LLM-as-a-Judge Evaluation",
         event: "Personal Project",
