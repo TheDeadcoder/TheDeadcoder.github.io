@@ -21,7 +21,7 @@
       {
         name: "DC-Ops-assistant",
         technologies: ["unsloth", "TRL", "vLLM", "GRPO", "OpenEnv", "transformers", "huggingface", "llm-as-a-judge", "rocm", "supervised finetuning" ],
-        description: "Making a physics-grounded RL training pipeline for datacenter operations. DC-Ops is high-fidelity datacenter simulation environment for training LLM agents as datacenter operators, built on Meta's OpenEnv framework. The project includes: generating synthetic training data using large Teacher model, supervise fine-tuning a 7B parameter language model with Unsloth, optimizing it further with GRPO",
+        description: "A physics-grounded, three-phase training pipeline was constructed to fine-tune a 7B-parameter LLM - Qwen2.5-7B-Instruct - for datacenter NOC operations. A teacher-distilled SFT dataset of 7,107 turns was synthesized via DeepSeek-R1-Distill-Qwen-32B against a custom RC-thermal simulation environment, then GRPO was applied using a composite reward architecture spanning format compliance, live physics feedback, scenario-aware heuristics, and anti-looping penalties. A +188% reward gain was observed over 7 epochs on a single AMD MI300X, with LoRA adapters published to HuggingFace",
         event: "Personal Project",
         logo: pytorch,
         demo: "https://huggingface.co/spaces/Melikshah/dc_ops_env",
@@ -51,7 +51,7 @@
         description: "It is a project developed for developing personalized RAG chatbot. The challenging part was to enable users use Banglish (Bangla written in English) and convert it to Bengali. Also it included sharing, customizing bot-behaviour, fewshot inference, transliterate api usage etc",
         event: "KUET-BITFEST Hackathon - 2025",
         logo: tokkhok,
-        demo: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//BUET_GENESIS.pdf",
+        demo: "https://youtu.be/2UInbtVz1oE",
         link: "https://github.com/TheDeadcoder/Tokkhok-Backend"
       }, 
       {

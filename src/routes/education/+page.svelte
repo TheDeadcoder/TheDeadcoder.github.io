@@ -18,16 +18,16 @@
           subtext: "Among top 20% in Academic Performance",
           perfect: {
             value: "4.00/4.00 in the final Semester",
-            result_url:"https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//result.png"
+            result_url:"https://ik.imagekit.io/sakib61/portfolio/result.png"
           }
         },
         deansList: {
           title: "Dean's List Scholar",
           description: "Enlisted in the prestigious Dean's List thrice",
           certificates: [
-            { year: "1st Year", url: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/deans_list/deans_list_1st_year.pdf" },
-            { year: "2nd Year", url: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/deans_list/Deans_list_2nd_year.pdf" },
-            { year: "4th Year", url: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/deans_list/deans_list_4th_year.pdf" }
+            { year: "1st Year", url: "https://ik.imagekit.io/sakib61/portfolio/deans_list_1st_year.pdf" },
+            { year: "2nd Year", url: "https://ik.imagekit.io/sakib61/portfolio/Deans_list_2nd_year.pdf" },
+            { year: "4th Year", url: "https://ik.imagekit.io/sakib61/portfolio/deans_list_4th_year.pdf" }
           ]
         }
       },
@@ -36,12 +36,12 @@
           {
             title: "Outstanding Award",
             description: "Ranked 3rd overall in academics",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/college/ndc.jpg"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/ndc.jpg"
           },
           {
             title: "Board Merit",
             description: "Ranked 26th in Dhaka Board (HSC)",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/college/hsc-sch-dhaka.pdf#page=5"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/hsc-sch-dhaka.pdf#page=5"
           }
         ]
       },
@@ -55,29 +55,29 @@
           {
             title: "National Creative Talent Hunt Champion",
             description: "Secured first place in the national round",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/school/20210205_173303.jpg"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/national_talent_hunt.jpg"
           },
           {
             title: "IPHO National Camp",
             description: "Selected as national camper for International Physics Olympiad",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/school/20210205_173345.jpg"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/ipho.jpg"
           },
           {
             title: "Science Olympiad",
             description: "Competed in National Science Olympiad",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics/school/20210205_173521.jpg"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/science_olympiad.jpg"
           },
           {
             title: "Talentpool Scholarship",
             description: "Got Talentpool Scholarship in SSC (Board Position: 1st), JSC (Board Position: 8th) and PSC",
-            certificateUrl: "https://ycjfhirkrwhkotpadfln.supabase.co/storage/v1/object/public/statics//ssc_result.pdf#page=3"
+            certificateUrl: "https://ik.imagekit.io/sakib61/portfolio/ssc_result.pdf#page=3"
           }
         ]
       }
     };
     let notableCourses = {
         columnOne: [
-            { code: "CSE 305", name: "Computer Architecture" },
+            { code: "CSE 471", name: "Machine Learning" },         
             { code: "CSE 307", name: "Software Engineering" },
             { code: "CSE 309", name: "Compiler Design" },
             { code: "CSE 313", name: "Operating Systems" },
@@ -88,7 +88,7 @@
             { code: "CSE 405", name: "Computer Security" },
             { code: "CSE 409", name: "Computer Graphics" },
             { code: "CSE 463", name: "Introduction to Bioinformatics" },
-            { code: "CSE 471", name: "Machine Learning" },
+            { code: "CSE 305", name: "Computer Architecture" },
             { code: "MATH 245", name: "Statistics and Probability" },
             { code: "MATH 247", name: "Linear Algebra" },
         ]
