@@ -71,6 +71,7 @@
     import rocm from '$lib/logos/rocm.svg';
     import grpo from '$lib/logos/grpo.svg';
     import trl from '$lib/logos/trl.svg';
+    import mlflow from '$lib/logos/mlflow.svg';
 
 	import { quintOut } from 'svelte/easing';
 
@@ -133,6 +134,7 @@
     "ROCm": { type: 'devicon', icon: rocm },
     "GRPO": { type: 'devicon', icon: grpo },
     "TRL": { type: 'devicon', icon: trl },
+    "MLflow": { type: 'devicon', icon: mlflow },
 	};
 
 	const skillCategories = [
@@ -180,7 +182,7 @@
 			name: 'Tools',
 			icon: faTools,
 			color: 'bg-purple-500',
-			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase", "jest", "ROCm"]
+			skills: ['Git', 'Docker', "Nginx", 'OpenAI API', 'Selenium', 'Firebase', "Scrapy", "Cloudflare", "Metabase", "jest", "ROCm", "MLflow"]
 		},
 		{
 			name: 'Soft Skills',

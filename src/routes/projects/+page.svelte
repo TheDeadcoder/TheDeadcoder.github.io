@@ -15,6 +15,7 @@
     import secu from "$lib/logos/secu.svg";
     import civilgpt from "$lib/logos/civilgpt.svg"
     import pytorch from 'devicon/icons/pytorch/pytorch-original.svg';
+    import kaggle from 'devicon/icons/kaggle/kaggle-original.svg';
     let isLoading = true;
   
     const projects = [
@@ -63,6 +64,15 @@
         demo: "https://www.youtube.com/watch?v=-VOxQ5Nok_g",
         link: "https://github.com/InsightAI-BUET-Genesis"
       }, 
+      {
+        name: "BD-Prescription-OCR",
+        technologies: ["PyTorch", "ResNet50", "CRNN", "SWA", "scikit-learn", "MLflow", "Grad-CAM", "CLAHE"],
+        description: "A 78-way handwritten medicine-name classifier on the Doctor's Handwritten Prescription BD dataset. Built a ResNet50-CRNN architecture applying a bidirectional LSTM over backbone feature maps to preserve left-to-right word structure. A 5-fold StratifiedGroupKFold SWA ensemble with hash-based leakage detection achieved 92.53% test accuracy and 0.9234 macro-F1 - a +6.44 pt gain over the ResNet50 baseline.",
+        event: "Personal Project",
+        logo: kaggle,
+        demo: "https://drive.google.com/drive/folders/1CLAym4i13zzwOQqjEYQ3lZFeEEm83KHM?usp=sharing",
+        link: "https://github.com/TheDeadcoder/bd-prescription-medicine-recognize"
+      },
       {
         name: "ShopGenie",
         technologies: ["OpenAI API", "Selenium", "FastAPI", "Qdrant Vector Database", "Clip-VIT-model", "Sveltekit", "TailwindCSS", "TypeScript", "Postgres", "Drizzle"],
