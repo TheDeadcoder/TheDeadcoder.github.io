@@ -40,7 +40,7 @@ export const experience = [
 				location: 'Warszawa, Poland (Remote)',
 				highlights: [
 					'Sluqe: built a voice-notes platform that transcribes, structures and makes recordings searchable and chattable. Delivered the Next.js dashboard and Flutter iOS/Android app on Firebase Cloud Functions and Firestore, with Genkit agent flows for chat over personal notes, web search, deep research, folders, share links, Notion export and Stripe billing.',
-					'IoT SOS Alert System: built a device-agnostic emergency pipeline with a Terraform-provisioned serverless backend and an asyncio TCP bridge. Integrated Tuya WiFi buttons, binary 4G terminals and GPS bracelets through protocol adapters, escalating alerts to registered contacts through SNS and Twilio. Covered the system with 235 unit tests.',
+					'IoT SOS Alert System: built a device-agnostic emergency pipeline with a Terraform-provisioned serverless backend and an asyncio TCP bridge. Integrated Tuya WiFi buttons, binary 4G terminals and GPS bracelets through protocol adapters, escalating alerts to registered contacts through SNS and Twilio. Covered the system with unit tests, and integration tests.',
 					'Aviators Spring: developed a Flutter app for pilots with Mapbox layers for airports, weather and VFR sectional charts. Rebuilt FAA NASR ingestion as a two-tier GeoJSON pipeline and automated the parallel publication of roughly 3.5 GB of FAA sectional GeoTIFFs as Mapbox tilesets.'
 				]
 			}
