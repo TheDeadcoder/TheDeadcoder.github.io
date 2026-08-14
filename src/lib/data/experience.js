@@ -49,13 +49,13 @@ export const experience = [
 		company: 'Intellesphere',
 		logo: buet,
 		url: '#',
-		location: 'Dhaka, Bangladesh',
+		location: 'Dhaka, Bangladesh (Remote)',
 		note: 'BUET-affiliated venture',
 		roles: [
 			{
 				title: 'Founding Engineer (Backend & AI)',
 				period: 'Mar 2024 – Mar 2025',
-				location: 'Dhaka, Bangladesh',
+				location: 'Dhaka, Bangladesh (Remote)',
 				highlights: [
 					'Pubali–Intellesphere: engineered a banking RAG assistant handling complex PDF and table parsing with LlamaParse and Qdrant hybrid indexing, serving both public bank data and personalised customer queries with a human-in-the-loop escalation path. Secured access with Keycloak, authentication with Supabase, and analytics with Metabase.',
 					'Shajgoj-AI: built a multimodal product search engine over text and image inputs using CLIP embeddings and ChromaDB, with reranking and a recommendation layer. Collected the catalogue via Scrapy and Playwright, and ran the pipeline on Celery with Redis caching behind FastAPI.',
@@ -89,12 +89,12 @@ export const experience = [
 		company: 'Oleyn',
 		logo: oleyn,
 		url: 'https://www.oleyn.ai/',
-		location: 'Remote',
+		location: 'Dhaka, Bangladesh (Remote)',
 		roles: [
 			{
 				title: 'Founding Engineer (Backend & AI)',
 				period: 'May 2024 – Dec 2024',
-				location: 'Remote',
+				location: 'Dhaka, Bangladesh (Remote)',
 				highlights: [
 					'Shrobon: engineered an AI-powered CX and marketing-campaign system for large customer centres. Built a Bengali ASR stack with fine-tuned models and NVIDIA NeMo speaker diarization for low-latency transcript generation, fronted by a RAG assistant on FastAPI with Redis caching and Docker deployment.',
 					'SuperAttorney: architected a legal research assistant for high-speed document parsing and retrieval, streamlining research, drafting and decision-making for legal professionals.'
@@ -106,12 +106,12 @@ export const experience = [
 		company: 'Yobo',
 		logo: yobo,
 		url: 'https://www.helloyobo.com/',
-		location: 'Remote',
+		location: 'Ontario, Canada (Remote)',
 		roles: [
 			{
 				title: 'Software Engineer Intern',
 				period: 'Jan 2024 – May 2024',
-				location: 'Remote',
+				location: 'Ontario, Canada (Remote)',
 				highlights: [
 					'Built YoboSQL, a text-to-SQL chat interface over large live SQL and NoSQL databases using LangChain, FastAPI and SvelteKit.',
 					'Optimised database interactions against MariaDB and handled deployment on cPanel environments.'

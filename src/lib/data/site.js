@@ -44,7 +44,7 @@ export const socials = [
 	{ label: 'Hugging Face', icon: 'huggingface', href: 'https://huggingface.co/Melikshah' },
 	{
 		label: 'Google Scholar',
-		icon: 'book',
+		icon: 'googleScholar',
 		href: 'https://scholar.google.com/citations?hl=en&user=b50aVhQAAAAJ'
 	},
 	{ label: 'Kaggle', icon: 'kaggle', href: 'https://kaggle.com/thedarkstorm' },
