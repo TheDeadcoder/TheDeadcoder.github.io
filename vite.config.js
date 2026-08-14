@@ -1,11 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
-// export default defineConfig({
-// 	plugins: [sveltekit()]
-// });
-
 export default defineConfig({
-	plugins: [sveltekit()],
-	base: process.env.NODE_ENV === 'production' ? '' : '/', // Match GitHub Pages root
-  });
+	plugins: [tailwindcss(), sveltekit()],
+	build: {
+		target: 'es2022'
+	}
+});

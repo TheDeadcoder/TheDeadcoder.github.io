@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="GeoQL">
+  <defs>
+    <linearGradient id="gq" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <path d="M6 18 L22 10 L42 18 L58 10 L58 46 L42 54 L22 46 L6 54 Z" stroke="url(#gq)" stroke-width="2.5" stroke-linejoin="round" opacity="0.45"/>
+  <path d="M22 10 V46 M42 18 V54" stroke="url(#gq)" stroke-width="2.5" stroke-linejoin="round" opacity="0.45"/>
+  <path d="M32 14 c-6.2 0-11.2 5-11.2 11.2 0 8.4 11.2 20.8 11.2 20.8 s11.2-12.4 11.2-20.8C43.2 19 38.2 14 32 14 Z" fill="url(#gq)"/>
+  <circle cx="32" cy="25" r="4.4" fill="#fff"/>
+</svg>

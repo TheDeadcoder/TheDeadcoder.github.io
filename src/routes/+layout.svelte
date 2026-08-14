@@ -1,35 +1,41 @@
 <script>
-    import Footer from "../components/Footer.svelte";
-    import Header from "../components/Header.svelte";
-    import "../app.css";
-    let y;
-    let innerWidth = 0;
-    let innerHeight = 0;
+	import '../app.css';
+	import Header from '$components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
+	import Icon from '$components/Icon.svelte';
+	import { initTheme } from '$lib/theme.svelte.js';
+	import { initTabs } from '$lib/tabs.svelte.js';
 
-    function goTop() {
-        document.body.scrollIntoView();
-    }
+	let { children } = $props();
+	let showTop = $state(false);
+
+	$effect(() => initTheme());
+	$effect(() => initTabs());
 </script>
 
-<div
-    class="container relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen"
+<svelte:window onscroll={() => (showTop = window.scrollY > 600)} />
+
+<a
+	href="#panels"
+	class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-100 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-accent-contrast"
 >
-    <div
-        class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10] " +
-            (y > 0
-                ? " opacity-full pointer-events-auto"
-                : " pointer-events-none opacity-0")}
-    >
-        <button
-            on:click={goTop}
-            class="ml-auto rounded-full bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer aspect-square grid place-items-center"
-        >
-            <i class="fa-solid fa-arrow-up" />
-        </button>
-    </div>
-    <Header {y} {innerHeight}/>
-    <slot />
-    
+	Skip to content
+</a>
+
+<div class="flex min-h-screen flex-col">
+	<Header />
+	<main class="flex-1">
+		{@render children()}
+	</main>
+	<Footer />
 </div>
-<Footer />
-<svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
+
+<button
+	type="button"
+	onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+	aria-label="Back to top"
+	class="no-print fixed right-5 bottom-5 z-40 grid size-10 place-items-center rounded-full border border-line bg-surface text-ink-muted shadow-lg transition-all duration-200 hover:text-ink
+		{showTop ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0'}"
+>
+	<Icon name="arrowUp" size={17} />
+</button>
