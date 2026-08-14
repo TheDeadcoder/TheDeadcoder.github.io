@@ -3,6 +3,7 @@ import priyo from '$lib/logos/priyo.svg';
 import oleyn from '$lib/logos/oleyn.svg';
 import yobo from '$lib/logos/yobo.svg';
 import bracu from '$lib/logos/bracu.svg';
+import sluqe from '$lib/logos/sluqe.svg';
 /**
  * Reverse-chronological. `projects` renders as a nested list inside a role –
  * use it when one role covered several distinct products.
@@ -27,10 +28,10 @@ export const experience = [
 		]
 	},
 	{
-		company: 'boet.io',
-		logo: null,
+		company: 'Sluqe',
+		logo: sluqe,
 		mark: 'BO',
-		url: 'https://boet.io',
+		url: 'https://sluqe.com/',
 		location: 'Warszawa, Poland (Remote)',
 		roles: [
 			{
