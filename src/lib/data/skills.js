@@ -27,6 +27,8 @@ import opencv from 'devicon/icons/opencv/opencv-original.svg';
 import pytorch from 'devicon/icons/pytorch/pytorch-original.svg';
 import scikitlearn from 'devicon/icons/scikitlearn/scikitlearn-original.svg';
 import cloudflare from 'devicon/icons/cloudflare/cloudflare-original.svg';
+import kubernetes from 'devicon/icons/kubernetes/kubernetes-original.svg';
+import terraform from 'devicon/icons/terraform/terraform-original.svg';
 import jest from 'devicon/icons/jest/jest-plain.svg';
 import figma from 'devicon/icons/figma/figma-original.svg';
 import jira from 'devicon/icons/jira/jira-original.svg';
@@ -135,6 +137,8 @@ export const skillGroups = [
 		summary: 'Shipping, observing and scraping at scale.',
 		skills: [
 			{ name: 'Docker', icon: docker },
+			{ name: 'Kubernetes', icon: kubernetes },
+			{ name: 'Terraform', icon: terraform },
 			{ name: 'Nginx', icon: nginx },
 			{ name: 'Git', icon: git },
 			{ name: 'Cloudflare', icon: cloudflare },

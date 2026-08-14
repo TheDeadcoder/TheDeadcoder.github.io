@@ -40,14 +40,14 @@
 	const websiteLd = {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
-		name: `${site.name} — Portfolio`,
+		name: `${site.name} | Portfolio`,
 		url: site.url,
 		inLanguage: 'en'
 	};
 </script>
 
 <svelte:head>
-	<title>{site.name} — {site.role}</title>
+	<title>{site.name} | {site.role}</title>
 	<meta name="description" content={site.description} />
 	<meta name="author" content={site.name} />
 	<meta name="keywords" content={site.keywords.join(', ')} />
@@ -55,19 +55,19 @@
 
 	<meta property="og:type" content="profile" />
 	<meta property="og:site_name" content={site.name} />
-	<meta property="og:title" content="{site.name} — {site.role}" />
+	<meta property="og:title" content="{site.name} | {site.role}" />
 	<meta property="og:description" content={site.description} />
 	<meta property="og:url" content={site.url} />
 	<meta property="og:image" content="{site.url}{site.ogImage}" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="{site.name} — {site.role}" />
+	<meta property="og:image:alt" content="{site.name} | {site.role}" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="profile:first_name" content="Nazmus" />
 	<meta property="profile:last_name" content="Sakib" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{site.name} — {site.role}" />
+	<meta name="twitter:title" content="{site.name} | {site.role}" />
 	<meta name="twitter:description" content={site.description} />
 	<meta name="twitter:image" content="{site.url}{site.ogImage}" />
 

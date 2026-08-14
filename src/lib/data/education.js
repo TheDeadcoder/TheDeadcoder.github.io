@@ -8,7 +8,7 @@ export const education = [
 		short: 'BUET',
 		logo: buet,
 		degree: 'B.Sc. in Computer Science & Engineering',
-		period: 'Jan 2020 — Mar 2025',
+		period: 'Jan 2020 – Mar 2025',
 		location: 'Dhaka, Bangladesh',
 		result: { label: 'CGPA', value: '3.82 / 4.00' },
 		notes: [
@@ -58,8 +58,8 @@ export const education = [
 		institution: 'Notre Dame College',
 		short: 'NDC',
 		logo: ndc,
-		degree: 'Higher Secondary Certificate — Science',
-		period: '2017 — 2019',
+		degree: 'Higher Secondary Certificate – Science',
+		period: '2017 – 2019',
 		location: 'Dhaka, Bangladesh',
 		notes: [],
 		honours: null,
@@ -80,8 +80,8 @@ export const education = [
 		institution: 'Cumilla Zilla School',
 		short: 'CZS',
 		logo: czs,
-		degree: 'Secondary School Certificate — Science',
-		period: '2011 — 2017',
+		degree: 'Secondary School Certificate – Science',
+		period: '2011 – 2017',
 		location: 'Cumilla, Bangladesh',
 		notes: [],
 		honours: null,
@@ -92,7 +92,7 @@ export const education = [
 				href: ''
 			},
 			{
-				title: 'National Creative Talent Hunt — Champion',
+				title: 'National Creative Talent Hunt – Champion',
 				description: 'First place in the national round.',
 				href: 'https://ik.imagekit.io/sakib61/portfolio/national_talent_hunt.jpg'
 			},

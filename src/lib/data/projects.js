@@ -12,6 +12,7 @@ import nerd from '$lib/logos/nerd.svg';
 import bebshaAI from '$lib/logos/bebshaAI.png';
 import huggingface from '$lib/logos/huggingface.svg';
 import secu from '$lib/logos/secu.svg';
+import googleDrive from '$lib/logos/google-drive.svg';
 
 /**
  * `category` drives the filter chips: 'ai' | 'web' | 'research'
@@ -76,14 +77,14 @@ export const projects = [
 		name: 'GeoQL-4B',
 		category: 'ai',
 		featured: true,
-		context: 'Personal research project · published negative result',
+		context: 'Personal research project · negative result',
 		logo: geoql,
 		summary:
-			'Text-to-OverpassQL via SFT then GRPO — a 4B model that turns natural-language requests into executable OverpassQL queries against OpenStreetMap. Fine-tuned Qwen3-4B-Instruct-2507 with rank-64 LoRA on 6,352 OverpassNL examples, then applied GRPO with five reward components (KVS overlap, structural overlap, chrF, format compliance, exact match). Published as an honest negative result: the RL stage was the central research bet and it did not pay off, so the repo documents five root causes — reward redundancy with SFT, knowledge bottlenecks unreachable by policy gradients, train/eval decoding mismatch, weak proxy metrics and collapsed learning signal after 200 steps.',
+			'Text-to-OverpassQL model fine-tuned from Qwen3-4B-Instruct-2507 with rank-64 LoRA on 6,352 OverpassNL examples, followed by GRPO with five reward signals. The RL stage improved OQS by only 0.23, within noise. The repository documents the negative result and its likely causes: reward redundancy, a knowledge bottleneck, decoding mismatch, weak proxies and collapsed learning signal.',
 		metrics: [
 			{ value: '68.49', label: 'OQS after SFT' },
-			{ value: '+0.23', label: 'OQS from GRPO — within noise' },
-			{ value: '~$35', label: 'total compute cost' }
+			{ value: '+0.23', label: 'OQS after GRPO' },
+			{ value: '~$35', label: 'Compute cost' }
 		],
 		stack: [
 			'Qwen3-4B',
@@ -129,7 +130,7 @@ export const projects = [
 		context: 'KUET BITFEST Hackathon 2025',
 		logo: tokkhok,
 		summary:
-			'A personalised RAG chatbot platform whose hard problem was Banglish — Bengali written in Latin script — which had to be transliterated to Bengali before retrieval. Supports bot sharing, behaviour customisation and few-shot inference.',
+			'A personalised RAG chatbot platform whose hard problem was Banglish, Bengali written in Latin script, which had to be transliterated to Bengali before retrieval. Supports bot sharing, behaviour customisation and few-shot inference.',
 		stack: [
 			'FastAPI',
 			'OpenAI API',
@@ -189,7 +190,7 @@ export const projects = [
 	{
 		name: 'ShopGenie',
 		category: 'ai',
-		context: 'Lablab AI — Reasoning with o1, 2024',
+		context: 'Lablab AI – Reasoning with o1, 2024',
 		logo: shopgenie,
 		summary:
 			'An AI shopping platform over 21,000 scraped products supporting multimodal search by text, image or both, with a recommendation system and sentiment analysis on reviews.',
@@ -210,7 +211,7 @@ export const projects = [
 	{
 		name: 'CoderHub',
 		category: 'web',
-		context: 'Code Crafters Dev Sprint 2024 — 1st place',
+		context: 'Code Crafters Dev Sprint 2024 – 1st place',
 		logo: coderhub,
 		summary:
 			'A developer collaboration platform with project management (upload, diff, download), video calling, collaborative coding, groups, skill-based project matching and an AI chat assistant.',
@@ -243,7 +244,7 @@ export const projects = [
 	{
 		name: 'Voyager',
 		category: 'web',
-		context: 'IUT OpenAPI Hackathon 2024 — 1st place',
+		context: 'IUT OpenAPI Hackathon 2024 – 1st place',
 		logo: voyager,
 		summary:
 			'An attraction-discovery platform surfacing weather, amenities and reviews for locations, with user-contributed travel experiences and suggestions.',
@@ -263,7 +264,7 @@ export const projects = [
 	{
 		name: 'NerdHerd',
 		category: 'web',
-		context: 'CSE 408 — Software Development project',
+		context: 'CSE 408 – Software Development project',
 		logo: nerd,
 		summary:
 			'A distraction-minimising productivity app bundling collaborative note-taking, video calling, article writing, real-time quizzes and an AI chatbot into one workspace.',
@@ -283,7 +284,7 @@ export const projects = [
 	{
 		name: 'BebshaAI',
 		category: 'web',
-		context: 'SUST CSE Carnival Hackathon 2024 — 1st place',
+		context: 'SUST CSE Carnival Hackathon 2024 – 1st place',
 		logo: bebshaAI,
 		summary:
 			'An AI platform helping small and midsize enterprises establish an online presence, generating a storefront where they can list and sell products with minimal setup.',
@@ -292,12 +293,33 @@ export const projects = [
 		demo: ''
 	},
 	{
+		name: 'Vault',
+		category: 'web',
+		context: 'Personal project · resilient file transfer',
+		logo: googleDrive,
+		summary:
+			'A private file manager that lets approved users upload large folders directly into the owner’s Google Drive. Its split control and data planes bypass the server for file bytes, while resumable chunks, IndexedDB queue persistence, adaptive chunk sizing, checksum verification and deduplication keep terabyte-scale transfers reliable across dropped connections, browser crashes and server restarts.',
+		stack: [
+			'FastAPI',
+			'React',
+			'Google Drive API',
+			'IndexedDB',
+			'SQLite',
+			'Docker',
+			'Caddy',
+			'GCP',
+			'TailwindCSS'
+		],
+		repo: 'https://github.com/TheDeadcoder/vault',
+		demo: ''
+	},
+	{
 		name: 'Scraping Toolkit',
 		category: 'ai',
 		context: 'Dataset engineering',
 		logo: huggingface,
 		summary:
-			'A collection of large-scale scraping pipelines covering extraction, cleaning and dataset construction — built to produce RAG-ready corpora, with several datasets published to Hugging Face.',
+			'A collection of large-scale scraping pipelines covering extraction, cleaning and dataset construction, built to produce RAG-ready corpora with several datasets published to Hugging Face.',
 		stack: ['Scrapy', 'Playwright', 'Selenium', 'ScrapeOps', 'BeautifulSoup', 'Hugging Face'],
 		repo: '',
 		demo: 'https://huggingface.co/Melikshah',
@@ -306,7 +328,7 @@ export const projects = [
 	{
 		name: 'Subdomain Enumeration',
 		category: 'web',
-		context: 'CSE 406 — Computer Security lab',
+		context: 'CSE 406 – Computer Security lab',
 		logo: secu,
 		summary:
 			'A subdomain discovery and assessment toolchain that enumerates the subdomains of a target domain and probes their authentication surface, built as a controlled security lab exercise.',

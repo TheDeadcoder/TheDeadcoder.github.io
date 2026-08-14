@@ -11,7 +11,7 @@
 	icon="briefcase"
 	eyebrow="Experience"
 	title="Where I've built things"
-	lead="Six roles across AI research, applied LLM engineering and full-stack product work — from founding-engineer seats at early-stage ventures to teaching at university."
+	lead="Six roles across AI research, applied LLM engineering and full-stack product work, from founding-engineer seats at early-stage ventures to teaching at university."
 />
 
 <ol class="relative space-y-4">

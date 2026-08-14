@@ -34,6 +34,6 @@ export function toggleTheme() {
 	try {
 		localStorage.setItem(STORAGE_KEY, next);
 	} catch {
-		/* storage unavailable — theme still applies for this session */
+		/* Storage unavailable; theme still applies for this session. */
 	}
 }

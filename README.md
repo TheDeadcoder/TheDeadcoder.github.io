@@ -1,4 +1,4 @@
-# Nazmus Sakib — Portfolio
+# Nazmus Sakib | Portfolio
 
 Single-page, tab-navigated portfolio built with **SvelteKit 2**, **Svelte 5** and **Tailwind CSS 4**,
 prerendered to static HTML and deployed to GitHub Pages.
@@ -16,7 +16,7 @@ There is exactly **one route** (`/`). Every section is a tab panel on that page,
 sub-paths to break, no client-side router, and no 404s on refresh. Tabs are deep-linkable through
 the URL fragment (`/#projects`, `/#experience`, …), which the browser back button understands.
 
-All seven panels stay in the DOM — inactive ones carry the `hidden` attribute — so the prerendered
+All seven panels stay in the DOM. Inactive ones carry the `hidden` attribute, so the prerendered
 HTML contains the entire portfolio for crawlers while the interface stays tabbed for humans.
 
 Old section URLs from the previous version (`/projects`, `/education`, `/skill_certifications`, …)
@@ -41,15 +41,6 @@ site.
 Hero statistics are **derived** from these files (role count, project count, first-place wins), so
 they can never fall out of sync with the sections below.
 
-### Outstanding TODOs
-
-Search the repo for `TODO` — currently one:
-
-- `experience.js` → **BRAC University** teaching/research responsibilities (placeholder line in place)
-
-Project cards whose `summary` starts with `TODO` render with a dashed border and a
-"Description pending" note, so unfinished entries are visibly unfinished rather than silently wrong.
-
 ### Adding a logo
 
 `Logo.svelte` falls back to a typographic monogram when `logo: null`. To use a real logo, drop the
@@ -67,7 +58,7 @@ remembered in `localStorage`.
 
 ## SEO & performance
 
-- `sitemap.xml` generated at build time — **the namespace bug in the previous version is fixed**
+- `sitemap.xml` generated at build time. **The namespace bug in the previous version is fixed**
   (it declared `https://www.sitemaps.org/...`, which is not a valid namespace URI, so validators
   and Search Console rejected the file; it must be `http://`)
 - `robots.txt` pointing at the sitemap
@@ -85,5 +76,5 @@ To change the canonical domain, edit `site.url` in `src/lib/data/site.js` and th
 ## Deployment
 
 `.github/workflows/deploy.yml` builds on every push to `main` and publishes `./build` to GitHub
-Pages. If you use a custom domain, uncomment the `cname:` line in the workflow — `force_orphan: true`
+Pages. If you use a custom domain, uncomment the `cname:` line in the workflow. `force_orphan: true`
 wipes the branch on each deploy and would otherwise delete the `CNAME` file.

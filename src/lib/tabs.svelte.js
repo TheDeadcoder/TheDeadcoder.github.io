@@ -22,7 +22,7 @@ function normalise(raw) {
 }
 
 /**
- * Switch tabs. Uses the hash purely as a deep-link handle — no route
+ * Switch tabs. Uses the hash purely as a deep-link handle; no route
  * navigation happens, so there is never a server round trip or a 404.
  *
  * @param {string} id

@@ -9,9 +9,9 @@ export const site = {
 	role: 'AI/ML Engineer · Lecturer',
 	headline: 'AI/ML Engineer & Lecturer',
 	tagline:
-		'I build production LLM systems — fine-tuning, RL post-training and retrieval pipelines — and teach the fundamentals behind them.',
+		'I build production LLM systems, including fine-tuning, RL post-training and retrieval pipelines, and teach the fundamentals behind them.',
 	description:
-		'Nazmus Sakib — AI/ML Engineer and Lecturer at BRAC University. BUET CSE graduate specialising in LLM fine-tuning, GRPO reinforcement learning, agentic RAG and full-stack engineering.',
+		'Nazmus Sakib, AI/ML Engineer and Lecturer at BRAC University. BUET CSE graduate specialising in LLM fine-tuning, GRPO reinforcement learning, agentic RAG and full-stack engineering.',
 	keywords: [
 		'Nazmus Sakib',
 		'AI Engineer',
@@ -43,9 +43,9 @@ export const socials = [
 	},
 	{ label: 'Hugging Face', icon: 'huggingface', href: 'https://huggingface.co/Melikshah' },
 	{
-		label: 'Publication',
-		icon: 'file',
-		href: 'https://ceur-ws.org/Vol-4028/paper8.pdf'
+		label: 'Google Scholar',
+		icon: 'book',
+		href: 'https://scholar.google.com/citations?hl=en&user=b50aVhQAAAAJ'
 	},
 	{ label: 'Kaggle', icon: 'kaggle', href: 'https://kaggle.com/thedarkstorm' },
 	{ label: 'Codeforces', icon: 'codeforces', href: 'https://codeforces.com/profile/melikshah' },

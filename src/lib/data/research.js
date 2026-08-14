@@ -13,7 +13,7 @@ export const publications = [
 	{
 		title:
 			'MemAgent: A cache-inspired framework for augmenting conversational Web Agents with task-specific information',
-		venue: 'WOA 2025 — 26th Workshop "From Objects to Agents"',
+		venue: 'WOA 2025 – 26th Workshop "From Objects to Agents"',
 		venueUrl: 'https://ceur-ws.org/Vol-4028/',
 		venueLogo: woa,
 		year: 2025,

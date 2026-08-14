@@ -7,7 +7,7 @@
 		{
 			icon: 'sparkles',
 			title: 'LLM post-training, end to end',
-			body: 'I build the full pipeline — teacher-distilled dataset synthesis, supervised fine-tuning, then GRPO with composite reward design — and I report what actually happened. My GeoQL work is published as a negative result because the RL stage did not beat SFT, and that is worth documenting.'
+			body: 'I build the full pipeline: teacher-distilled dataset synthesis, supervised fine-tuning, then GRPO with composite reward design. I also report what actually happened. My GeoQL work is published as a negative result because the RL stage did not beat SFT, and that is worth documenting.'
 		},
 		{
 			icon: 'layers',
@@ -36,7 +36,7 @@
 	icon="user"
 	eyebrow="About"
 	title="Engineer, researcher, teacher"
-	lead="I work at the point where language models stop being demos and start being systems people depend on — and I teach the fundamentals that make that possible."
+	lead="I work at the point where language models stop being demos and start being systems people depend on, and I teach the fundamentals that make that possible."
 />
 
 <div class="grid gap-4 sm:grid-cols-2">

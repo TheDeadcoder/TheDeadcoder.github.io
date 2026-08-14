@@ -7,13 +7,13 @@ import secCSEFest from '$lib/assets/sec-cse-fest-2022.webp';
 import sustCSECarnival from '$lib/assets/sust-carnival-2024.webp';
 import bcolbd from '$lib/assets/bcolbd-2024.webp';
 
-/** rank: 'gold' | 'silver' | 'bronze' — drives the badge colour only. */
+/** rank: 'gold' | 'silver' | 'bronze'; drives the badge colour only. */
 export const achievements = [
 	{
 		year: 2024,
 		events: [
 			{
-				name: 'IUT 11th National ICT Fest — OpenAPI Hackathon',
+				name: 'IUT 11th National ICT Fest – OpenAPI Hackathon',
 				result: '1st Place',
 				rank: 'gold',
 				certificate: iutNationalICT
@@ -25,25 +25,25 @@ export const achievements = [
 				certificate: devSprint
 			},
 			{
-				name: 'SUST CSE Carnival 2024 — Hackathon',
+				name: 'SUST CSE Carnival 2024 – Hackathon',
 				result: '1st Place',
 				rank: 'gold',
 				certificate: sustCSECarnival
 			},
 			{
-				name: 'Gen-Dev AI Hackathon — Gender Knowledge Augmentation',
+				name: 'Gen-Dev AI Hackathon – Gender Knowledge Augmentation',
 				result: 'Runner-up',
 				rank: 'silver',
 				certificate: genDev
 			},
 			{
-				name: 'BCOLBD 2024 — AI Category',
+				name: 'BCOLBD 2024 – AI Category',
 				result: 'Honorable Mention',
 				rank: 'bronze',
 				certificate: bcolbd
 			},
 			{
-				name: 'Lablab AI — Reasoning with o1',
+				name: 'Lablab AI – Reasoning with o1',
 				result: 'Final Round Participant',
 				rank: 'bronze',
 				certificate: lablab
@@ -54,7 +54,7 @@ export const achievements = [
 		year: 2023,
 		events: [
 			{
-				name: 'Cefalo ITverse 2023 — Project Showcase',
+				name: 'Cefalo ITverse 2023 – Project Showcase',
 				result: '1st Place',
 				rank: 'gold',
 				certificate: itVerse

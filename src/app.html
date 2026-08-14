@@ -27,7 +27,7 @@
 						(stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
 					document.documentElement.classList.toggle('dark', dark);
 				} catch (e) {
-					/* private mode — fall back to light */
+					/* Private mode: fall back to light. */
 				}
 			})();
 		</script>

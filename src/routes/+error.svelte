@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-	<title>{page.status} — Nazmus Sakib</title>
+	<title>{page.status} | Nazmus Sakib</title>
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
@@ -55,7 +55,7 @@
 		</h1>
 		<p class="mt-3 max-w-md text-[15px] leading-relaxed text-ink-muted">
 			{page.status === 404
-				? 'The portfolio lives entirely on one page now — everything is a tab away.'
+				? 'The portfolio lives entirely on one page now, with everything a tab away.'
 				: (page.error?.message ?? 'An unexpected error occurred.')}
 		</p>
 	{/if}

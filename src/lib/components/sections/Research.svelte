@@ -9,7 +9,7 @@
 	icon="beaker"
 	eyebrow="Research"
 	title="Publications & interests"
-	lead="I care about what happens after the benchmark number — how agents remember, how post-training actually behaves, and how people work alongside these systems."
+	lead="I care about what happens after the benchmark number: how agents remember, how post-training actually behaves, and how people work alongside these systems."
 />
 
 <h3 class="mb-4 text-[13px] font-semibold tracking-wide text-ink-subtle uppercase">Publications</h3>

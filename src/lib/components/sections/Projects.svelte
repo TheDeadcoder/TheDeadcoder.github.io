@@ -13,7 +13,7 @@
 	icon="layers"
 	eyebrow="Projects"
 	title="Selected work"
-	lead="Research pipelines, production AI systems and award-winning hackathon builds. Metrics are reported as measured — including the run that did not work."
+	lead="Research pipelines, production AI systems and award-winning hackathon builds. Metrics are reported as measured, including the run that did not work."
 />
 
 <div class="mb-8 flex flex-wrap items-center gap-2" role="group" aria-label="Filter projects">
@@ -40,7 +40,7 @@
 			class="group flex flex-col rounded-2xl border bg-surface p-5 transition-colors duration-200 hover:border-line-strong
 				{project.featured ? 'border-accent/25' : 'border-line'}"
 		>
-			<div class="mb-4 flex items-start gap-3">
+			<div class="mb-4 flex min-h-[3.5rem] items-start gap-3">
 				<img
 					src={project.logo}
 					alt=""
@@ -57,11 +57,18 @@
 			</div>
 
 			{#if project.metrics?.length}
-				<dl class="mb-4 flex flex-wrap gap-x-5 gap-y-2">
+				<dl
+					class="mb-4 grid min-h-[3.25rem] gap-2"
+					style="grid-template-columns: repeat({project.metrics.length}, minmax(0, 1fr));"
+				>
 					{#each project.metrics as m}
-						<div>
-							<dd class="font-mono text-[15px] font-semibold text-accent">{m.value}</dd>
-							<dt class="text-[11px] text-ink-subtle">{m.label}</dt>
+						<div class="min-w-0">
+							<dd class="font-mono text-[15px] font-semibold whitespace-nowrap text-accent">
+								{m.value}
+							</dd>
+							<dt class="text-[10.5px] leading-4 whitespace-nowrap text-ink-subtle">
+								{m.label}
+							</dt>
 						</div>
 					{/each}
 				</dl>

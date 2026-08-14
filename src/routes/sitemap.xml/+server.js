@@ -20,7 +20,7 @@ export function GET() {
     <priority>1.0</priority>
     <image:image>
       <image:loc>${site.url}${site.ogImage}</image:loc>
-      <image:title>${site.name} — ${site.role}</image:title>
+      <image:title>${site.name} | ${site.role}</image:title>
     </image:image>
   </url>
 </urlset>
