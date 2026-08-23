@@ -13,6 +13,7 @@ import bebshaAI from '$lib/logos/bebshaAI.png';
 import huggingface from '$lib/logos/huggingface.svg';
 import secu from '$lib/logos/secu.svg';
 import googleDrive from '$lib/logos/google-drive.svg';
+import scout from '$lib/logos/scout.svg';
 
 /**
  * `category` drives the filter chips: 'ai' | 'web' | 'research'
@@ -46,6 +47,41 @@ export const projects = [
 		repo: 'https://github.com/TheDeadcoder/dc_ops_training',
 		demo: 'https://huggingface.co/spaces/Melikshah/dc_ops_env',
 		demoLabel: 'Live Space'
+	},
+	{
+		name: 'Scout',
+		category: 'ai',
+		featured: true,
+		context: 'Personal project · agentic systems',
+		logo: scout,
+		summary:
+			'An autonomous competitive intelligence system that monitors competitor pricing, scores meaningful changes, and produces source-linked weekly briefs. A three-tier escalation pipeline keeps costs low, while transactional job claiming and bitemporal facts ensure reliable processing and historical price tracking.',
+		metrics: [
+			{ value: '1.00', label: 'precision and recall, detector gate in CI' },
+			
+			{ value: '197', label: 'tests against a real Postgres' }
+		],
+		stack: [
+			'FastAPI',
+			'Next.js',
+			'Langfuse',
+			'Docker',
+			'Bright Data',
+			'Playwright',
+			'Terraform',
+			'PostgreSQL',
+			'SQLAlchemy',
+			'Alembic',
+			'Qdrant',
+			'Supabase',
+			
+			'OpenAI API',
+			
+			'TypeScript'
+		],
+		repo: 'https://github.com/TheDeadcoder/scout',
+		demo: 'https://www.youtube.com/watch?v=Agw1zf_uz34',
+		demoLabel: 'Video demo'
 	},
 	{
 		name: 'Medical CoT Assistant',
@@ -84,7 +120,7 @@ export const projects = [
 		metrics: [
 			{ value: '68.49', label: 'OQS after SFT' },
 			{ value: '+0.23', label: 'OQS after GRPO' },
-			{ value: '~$35', label: 'Compute cost' }
+			// { value: '~$35', label: 'Compute cost' }
 		],
 		stack: [
 			'Qwen3-4B',
@@ -101,6 +137,7 @@ export const projects = [
 		demo: 'https://huggingface.co/Melikshah/GeoQL-4B-SFT',
 		demoLabel: 'Model card'
 	},
+
 	{
 		name: 'CivilMate',
 		category: 'ai',
@@ -120,7 +157,7 @@ export const projects = [
 			'SvelteKit',
 			'shadcn'
 		],
-		repo: '',
+		repo: 'https://github.com/TheDeadcoder/civilmate-backend',
 		demo: 'https://civilmate.vercel.app/',
 		demoLabel: 'Live site'
 	},

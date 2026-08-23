@@ -58,15 +58,14 @@
 
 			{#if project.metrics?.length}
 				<dl
-					class="mb-4 grid min-h-[3.25rem] gap-2"
-					style="grid-template-columns: repeat({project.metrics.length}, minmax(0, 1fr));"
+					class="mb-4 grid gap-2 [grid-template-columns:repeat(auto-fit,minmax(8.75rem,1fr))]"
 				>
 					{#each project.metrics as m}
-						<div class="min-w-0">
-							<dd class="font-mono text-[15px] font-semibold whitespace-nowrap text-accent">
+						<div class="min-w-0 rounded-lg border border-line/80 bg-surface-2/60 px-2.5 py-2">
+							<dd class="font-mono text-[15px] leading-tight font-semibold whitespace-nowrap text-accent">
 								{m.value}
 							</dd>
-							<dt class="text-[10.5px] leading-4 whitespace-nowrap text-ink-subtle">
+							<dt class="mt-1 text-[10.5px] leading-4 text-ink-subtle">
 								{m.label}
 							</dt>
 						</div>

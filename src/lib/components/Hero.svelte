@@ -93,13 +93,13 @@
 			</div>
 		</div>
 
-		<dl class="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
+		<!-- <dl class="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
 			{#each stats as stat (stat.label)}
 				<div class="bg-surface px-4 py-4 sm:px-5 sm:py-5">
 					<dt class="text-[11.5px] tracking-wide text-ink-subtle uppercase">{stat.label}</dt>
 					<dd class="mt-1 font-mono text-xl font-semibold sm:text-2xl">{stat.value}</dd>
 				</div>
 			{/each}
-		</dl>
+		</dl> -->
 	</div>
 </section>
