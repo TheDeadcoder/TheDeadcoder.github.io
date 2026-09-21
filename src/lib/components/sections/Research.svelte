@@ -45,6 +45,12 @@
 						{card.title}
 					</h4>
 
+					{#if card.description}
+						<p class="mt-2 text-[14px] leading-relaxed text-ink-muted">
+							{card.description}
+						</p>
+					{/if}
+
 					{#if card.lines?.length}
 						{#each card.lines as line, lineIndex}
 							<p class={lineIndex === 0 ? 'mt-3 text-[14px] text-ink-muted' : 'mt-1 text-[14px] text-ink-muted'}>

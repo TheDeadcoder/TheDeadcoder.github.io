@@ -3,7 +3,31 @@ import uiucSrse from '$lib/logos/uiuc-SRSE-2026.png';
 
 export const researchCards = [
 	{
+		title: 'Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?',
+		description:
+			'Giving every rollout in a GRPO group the same luck lifted success under tool faults from 61.8% to 66.8%, but not under grader noise.',
+		status: {
+			state: 'pending',
+			blink: true,
+			text: 'Finalising paper for TMLR submission'
+		},
+		tags: [
+			'LLM post-training',
+			'GRPO',
+			'Reinforcement Learning',
+			'Stochastic Environment',
+			'Common random numbers',
+			'Tool-use agents',
+			'Pre-registered'
+		],
+		links: [
+			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' }
+		]
+	},
+	{
 		title: 'Passing Without Repairing: Verifier Blind Spots in a Live SRE Agent Benchmark',
+		description:
+			"With the Service deleted and no agent acting, the benchmark's grader still reports the fault as mitigated, because it only checks pod health.",
 		status: {
 			state: 'pending',
 			blink: true,
@@ -18,29 +42,11 @@ export const researchCards = [
 		],
 		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' }]
 	},
-	{
-		title: 'Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?',
-		status: {
-			state: 'pending',
-			blink: true,
-			text: 'Finalising paper for TMLR submission'
-		},
-		tags: [
-			'LLM post-training',
-			'GRPO',
-			'Reinforcement Learning',
-			'Stochastic Environment',
-			'Common random numbers',
-			'Tool-use agents',
-			'Pre-registered',
-			
-		],
-		links: [
-			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' }
-		]
-	},
+	
 	{
 		title: 'Clarification Forensics: Does Halting After Clarification Reveal Misunderstanding?',
+		description:
+			"So far, telling Qwen3.5-9B the file is protected drops its protected-file picks from 27 of 36 to 1, but that alone doesn't show it was confused.",
 		status: {
 			state: 'pending',
 			text: 'Ongoing'
@@ -53,6 +59,8 @@ export const researchCards = [
 	{
 		title:
 			'MemAgent: A cache-inspired framework for augmenting conversational Web Agents with task-specific information',
+		description:
+			'MemAgent asks for task details once and caches them with an expiry date, so recurring web tasks took 58% less time in a 15-person study.',
 		badges: [
 			{ kind: 'year', text: '2025' },
 			{ kind: 'text', text: 'Peer-reviewed workshop paper' }
