@@ -28,11 +28,12 @@ export const researchCards = [
 		tags: [
 			'LLM post-training',
 			'GRPO',
+			'Reinforcement Learning',
+			'Stochastic Environment',
 			'Common random numbers',
 			'Tool-use agents',
 			'Pre-registered',
-			'Reinforcement Learning',
-			'Stochastic Environment'
+			
 		],
 		links: [
 			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' }

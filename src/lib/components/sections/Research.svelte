@@ -83,7 +83,7 @@
 			<div class="mt-6 border-t border-line pt-5">
 				<p class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13.5px] text-ink-muted">
 					<span
-						class="mt-0.5 size-2 shrink-0 rounded-full {card.status.state === 'published'
+						class="size-2 shrink-0 self-center rounded-full {card.status.state === 'published'
 							? 'bg-accent'
 							: card.status.blink
 								? 'animate-pulse bg-amber-400'
