@@ -29,6 +29,9 @@ import scikitlearn from 'devicon/icons/scikitlearn/scikitlearn-original.svg';
 import cloudflare from 'devicon/icons/cloudflare/cloudflare-original.svg';
 import kubernetes from 'devicon/icons/kubernetes/kubernetes-original.svg';
 import terraform from 'devicon/icons/terraform/terraform-original.svg';
+import aws from 'devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg';
+import gcp from 'devicon/icons/googlecloud/googlecloud-original.svg';
+import digitalocean from 'devicon/icons/digitalocean/digitalocean-original.svg';
 import jest from 'devicon/icons/jest/jest-plain.svg';
 import figma from 'devicon/icons/figma/figma-original.svg';
 import jira from 'devicon/icons/jira/jira-original.svg';
@@ -51,6 +54,8 @@ import grpo from '$lib/logos/grpo.svg';
 import trl from '$lib/logos/trl.svg';
 import mlflow from '$lib/logos/mlflow.svg';
 import yolo from '$lib/logos/yolo.svg';
+import modal from '$lib/logos/modal.svg';
+import runpod from '$lib/logos/runpod.svg';
 
 export const skillGroups = [
 	{
@@ -148,6 +153,18 @@ export const skillGroups = [
 			{ name: 'Jest', icon: jest },
 			{ name: 'Jira', icon: jira },
 			{ name: 'Figma', icon: figma }
+		]
+	},
+	{
+		name: 'Cloud Platforms',
+		icon: 'building',
+		summary: 'Compute and deployment familiarity across major cloud providers.',
+		skills: [
+			{ name: 'AWS', icon: aws },
+			{ name: 'Google Cloud', icon: gcp },
+			{ name: 'DigitalOcean', icon: digitalocean },
+			{ name: 'Modal', icon: modal },
+			{ name: 'Runpod', icon: runpod }
 		]
 	}
 ];
