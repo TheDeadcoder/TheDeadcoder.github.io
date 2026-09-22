@@ -9,7 +9,7 @@ export const researchCards = [
 		status: {
 			state: 'pending',
 			blink: true,
-			text: 'Finalising paper for TMLR submission'
+			text: 'Finalising for TMLR submission'
 		},
 		tags: [
 			'LLM post-training',
@@ -21,8 +21,12 @@ export const researchCards = [
 			'Pre-registered'
 		],
 		links: [
-			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' }
-		]
+			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' },
+			{ label: 'arXiv preprint', href: 'https://arxiv.org/abs/2609.24144', icon: 'arxiv' }
+		],
+		badges: [
+			{ kind: 'year', text: '2026' },
+		],
 	},
 	{
 		title: 'Passing Without Repairing: Verifier Blind Spots in a Live SRE Agent Benchmark',
@@ -40,7 +44,10 @@ export const researchCards = [
 			'SREGym',
 			'Kubernetes'
 		],
-		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' }]
+		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' }],
+		badges: [
+			{ kind: 'year', text: '2026' },
+		],
 	},
 	
 	{
@@ -54,7 +61,10 @@ export const researchCards = [
 		tags: ['AI safety', 'Interpretability', 'Model forensics', 'Qwen3.5-9B'],
 		links: [
 			{ label: 'Code', href: 'https://github.com/TheDeadcoder/AI-safety-forensics', icon: 'github' }
-		]
+		],
+		badges: [
+			{ kind: 'year', text: '2026' },
+		],
 	},
 	{
 		title:
