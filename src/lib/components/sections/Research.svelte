@@ -121,15 +121,23 @@
 				{#if card.links?.length}
 					<div class="mt-5 flex flex-wrap items-center gap-2">
 						{#each card.links as link}
-							<a
-								href={link.href}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="inline-flex w-fit items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-[12.5px] font-medium text-ink-muted transition-colors hover:border-line-strong hover:text-ink"
-							>
-								<Icon name={link.icon ?? 'external'} size={14} />
-								{link.label}
-							</a>
+							{#if link.href}
+								<a
+									href={link.href}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex w-fit items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-[12.5px] font-medium text-ink-muted transition-colors hover:border-line-strong hover:text-ink"
+								>
+									<Icon name={link.icon ?? 'external'} size={14} />
+									{link.label}
+								</a>
+							{:else}
+								<span
+									class="inline-flex w-fit items-center rounded-lg border border-line px-2.5 py-1.5 text-[12.5px] font-medium text-ink-subtle"
+								>
+									{link.label}
+								</span>
+							{/if}
 						{/each}
 					</div>
 				{/if}

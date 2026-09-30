@@ -3,6 +3,32 @@ import uiucSrse from '$lib/logos/uiuc-SRSE-2026.png';
 
 export const researchCards = [
 	{
+		title: 'Passing Without Repairing: Verifier Blind Spots in a Live SRE Agent Benchmark',
+		description:
+			"With the Service deleted and no agent acting, the benchmark's grader still reports the fault as mitigated, because it only checks Deployment and Pod health.",
+		status: {
+			state: 'published',
+			text: 'Accepted at NeurIPS 2026 Workshop "Who Verifies the Agents?" (Poster)',
+			href: 'https://verify-agents-workshop.github.io/'
+		},
+		tags: [
+			'AI for SRE',
+			'Benchmark verifiers',
+			'Mutation testing',
+			'SREGym',
+			'Kubernetes',
+			'Pre-registered'
+		],
+		links: [
+			{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' },
+			{ label: 'Paper forthcoming' }
+		],
+		badges: [
+			{ kind: 'year', text: '2026' },
+			{ kind: 'text', text: 'Peer-reviewed workshop paper' }
+		]
+	},
+	{
 		title: 'Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?',
 		description:
 			'Giving every rollout in a GRPO group the same luck lifted success under tool faults from 61.8% to 66.8%, but not under grader noise.',
@@ -24,27 +50,6 @@ export const researchCards = [
 			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' },
 			{ label: 'arXiv preprint', href: 'https://arxiv.org/abs/2609.24144', icon: 'arxiv' }
 		],
-		badges: [
-			{ kind: 'year', text: '2026' },
-		],
-	},
-	{
-		title: 'Passing Without Repairing: Verifier Blind Spots in a Live SRE Agent Benchmark',
-		description:
-			"With the Service deleted and no agent acting, the benchmark's grader still reports the fault as mitigated, because it only checks pod health.",
-		status: {
-			state: 'pending',
-			blink: true,
-			text: 'Under review at NeurIPS 2026 Workshop "Who Verifies the Agents?"'
-		},
-		tags: [
-			'AI for SRE',
-			'Benchmark verifiers',
-			'Mutation testing',
-			'SREGym',
-			'Kubernetes'
-		],
-		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' }],
 		badges: [
 			{ kind: 'year', text: '2026' },
 		],
@@ -83,6 +88,7 @@ export const researchCards = [
 		lines: [
 			{
 				label: 'Supervised by',
+				text: '',
 				joiner: ', ',
 				people: [
 					{
@@ -93,6 +99,7 @@ export const researchCards = [
 			},
 			{
 				label: 'Mentored by',
+				text: '',
 				joiner: ', ',
 				people: [
 					{
