@@ -154,7 +154,7 @@
 	use:reveal
 	class="rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-line-strong sm:p-7"
 >
-	<div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+	<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
 		{#if researchExperience.logo}
 			<img
 				src={researchExperience.logo}
@@ -192,9 +192,37 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="font-medium text-accent hover:underline">{person.name}</a
-					>{#if i < researchExperience.collaboration.people.length - 1}<span>{researchExperience.collaboration.joiner ?? ', '}</span>{/if}
+					>{#if i < researchExperience.collaboration.people.length - 2}<span>, </span>{:else if i === researchExperience.collaboration.people.length - 2}<span>{researchExperience.collaboration.joiner ?? ' and '}</span>{/if}
 				{/each}
 			</p>
+			{#if researchExperience.work?.length}
+				<div class="mt-3">
+					<p class="text-[14px] text-ink-muted">
+						<span class="text-ink-subtle">Work</span>
+					</p>
+					<ul class="mt-1 space-y-1.5">
+						{#each researchExperience.work as item}
+							<li class="text-[14px] text-ink-muted">
+								{#if item.href}
+									<a
+										href={item.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="font-medium text-accent hover:underline"
+									>
+										{item.title}
+									</a>
+								{:else}
+									<span>{item.title}</span>
+								{/if}
+								{#if item.kind}
+									<span class="text-ink-subtle"> ({item.kind})</span>
+								{/if}
+							</li>
+						{/each}
+					</ul>
+				</div>
+			{/if}
 		</div>
 	</div>
 </article>

@@ -8,7 +8,7 @@ export const researchCards = [
 			"With the Service deleted and no agent acting, the benchmark's grader still reports the fault as mitigated, because it only checks Deployment and Pod health.",
 		status: {
 			state: 'published',
-			text: 'Accepted at NeurIPS 2026 Workshop "Who Verifies the Agents?" (Poster)',
+			text: 'Accepted at NeurIPS 2026 Workshop "Who Verifies the Agents?"',
 			href: 'https://verify-agents-workshop.github.io/'
 		},
 		tags: [
@@ -143,11 +143,26 @@ export const researchExperience = {
 				url: 'https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en'
 			},
 			{
+				name: 'Prof. Tianyin Xu (UIUC)',
+				url: 'https://scholar.google.com/citations?user=h5ZyE5wAAAAJ&hl=en'
+			},
+			{
 				name: 'Prof. Wenxi Wang (University of Virginia)',
 				url: 'https://scholar.google.com/citations?user=o23gui0AAAAJ&hl=en'
 			}
 		]
-	}
+	},
+	work: [
+		{
+			title: 'Turning Failure Postmortems into SRE-Benchmark Problems',
+			href: 'https://www.sregym.com/blog/postmortems-to-sre-benchmarks',
+			
+		},
+		{
+			title: 'Ongoing work on two projects: a Verus project and a survey with accompanying experiments.',
+			kind: 'Ongoing'
+		}
+	]
 };
 
 export const researchInterests = [
