@@ -21,7 +21,7 @@ export const researchCards = [
 		],
 		links: [
 			{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' },
-			{ label: 'Paper forthcoming' }
+			{ label: 'Read the paper', href: 'https://openreview.net/forum?id=5ijFZfVQoy', icon: 'file' }
 		],
 		badges: [
 			{ kind: 'year', text: '2026' },
