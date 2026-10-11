@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thedeadcoder.github.io/sitemap.xml
+Sitemap: https://portfolio.nazmus-sakib-touhid.app/sitemap.xml

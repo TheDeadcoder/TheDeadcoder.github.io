@@ -2,10 +2,10 @@ import { browser } from '$app/environment';
 
 export const tabs = [
 	{ id: 'about', label: 'About', icon: 'user' },
-	{ id: 'experience', label: 'Experience', icon: 'briefcase' },
-	{ id: 'projects', label: 'Projects', icon: 'layers' },
 	{ id: 'research', label: 'Research', icon: 'beaker' },
+	{ id: 'experience', label: 'Experience', icon: 'briefcase' },
 	{ id: 'education', label: 'Education', icon: 'cap' },
+	{ id: 'projects', label: 'Projects', icon: 'layers' },
 	{ id: 'achievements', label: 'Achievements', icon: 'trophy' },
 	{ id: 'skills', label: 'Skills', icon: 'sparkles' }
 ];
@@ -44,7 +44,9 @@ export function setTab(id, opts = {}) {
 	if (scroll) {
 		const anchor = document.getElementById('panels');
 		const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (anchor && anchor.getBoundingClientRect().top < 0) {
+		// Also scroll when the panel top is only partly tucked under the sticky header.
+		const offset = anchor ? parseFloat(getComputedStyle(anchor).scrollMarginTop) || 0 : 0;
+		if (anchor && anchor.getBoundingClientRect().top < offset) {
 			anchor.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
 		}
 	}
@@ -57,7 +59,7 @@ export function initTabs() {
 	const fromHash = normalise(window.location.hash);
 	if (fromHash) {
 		tabState.active = fromHash;
-		// Land on the panel rather than the hero when someone opens a deep link.
+		// Land on the panel when someone opens a deep link.
 		requestAnimationFrame(() => {
 			document.getElementById('panels')?.scrollIntoView({ behavior: 'auto', block: 'start' });
 		});

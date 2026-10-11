@@ -3,15 +3,18 @@
  * Change the canonical URL here if you move to a custom domain.
  */
 export const site = {
-	url: 'https://thedeadcoder.github.io',
+	url: 'https://portfolio.nazmus-sakib-touhid.app',
 	name: 'Nazmus Sakib',
+	nameBn: 'নাজমুস সাকিব',
 	shortName: 'Nazmus Sakib',
 	role: 'AI/ML Engineer · Lecturer',
-	headline: 'AI/ML Engineer & Lecturer',
-	tagline:
-		'I build production LLM systems, including fine-tuning, RL post-training and retrieval pipelines, and teach the fundamentals behind them.',
+	position: ['Lecturer, Computer Science and Engineering', 'BRAC University'],
+	bio: [
+		'I study how AI agents fail, and how we can tell when they do. My research spans AI for Software Engineering and SRE, LLM post-training, and AI safety. I work at the point where language models stop being demos and start being systems people depend on.',
+		'I am a Lecturer in Computer Science and Engineering at BRAC University and hold a BSc from BUET. I am applying to PhD programs for Fall 2027 and welcome research collaborations.'
+	],
 	description:
-		'Nazmus Sakib, AI/ML Engineer and Lecturer at BRAC University. BUET CSE graduate specialising in LLM fine-tuning, GRPO reinforcement learning, agentic RAG and full-stack engineering.',
+		'Nazmus Sakib is a Lecturer in Computer Science and Engineering at BRAC University. He studies how AI agents fail and how we can tell, across AI for Software Engineering and SRE, LLM post-training and AI safety.',
 	keywords: [
 		'Nazmus Sakib',
 		'AI Engineer',
@@ -39,34 +42,16 @@ export const socials = [
 	{
 		label: 'LinkedIn',
 		icon: 'linkedin',
-		href: 'https://www.linkedin.com/in/nazmus-sakib-touhid-a43533205'
+		href: 'https://www.linkedin.com/in/nazmus-sakib-touhid-a43533205/'
 	},
 	{ label: 'Hugging Face', icon: 'huggingface', href: 'https://huggingface.co/Melikshah' },
 	{
 		label: 'Google Scholar',
 		icon: 'googleScholar',
-		href: 'https://scholar.google.com/citations?hl=en&user=b50aVhQAAAAJ'
+		href: 'https://scholar.google.com/citations?user=b50aVhQAAAAJ'
 	},
 	{ label: 'Kaggle', icon: 'kaggle', href: 'https://kaggle.com/thedarkstorm' },
 	{ label: 'Codeforces', icon: 'codeforces', href: 'https://codeforces.com/profile/melikshah' },
 	{ label: 'HackerRank', icon: 'hackerrank', href: 'https://www.hackerrank.com/sakibbuet2k19' },
 	{ label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@nazmussakib19061' }
-];
-
-import { experience } from './experience.js';
-import { projects } from './projects.js';
-import { achievements } from './achievements.js';
-
-/**
- * Headline numbers, derived from the data above so they can never drift out of
- * sync with the sections they summarise.
- */
-export const stats = [
-	{ value: `${experience.length}`, label: 'Roles' },
-	{ value: `${projects.length}`, label: 'Shipped projects' },
-	{
-		value: `${achievements.reduce((n, y) => n + y.events.filter((e) => e.rank === 'gold').length, 0)}`,
-		label: 'First-place wins'
-	},
-	{ value: '3.82', label: 'BUET CGPA / 4.00' }
 ];

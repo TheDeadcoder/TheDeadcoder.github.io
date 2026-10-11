@@ -3,6 +3,7 @@
 	import Icon from '../Icon.svelte';
 	import Tag from '../Tag.svelte';
 	import { reveal } from '$lib/actions/reveal.js';
+	import { isSettled, statusLabel } from '$lib/status.js';
 	import {
 		researchCards,
 		researchExperience,
@@ -89,25 +90,26 @@
 			<div class="mt-6 border-t border-line pt-5">
 				<p class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13.5px] text-ink-muted">
 					<span
-						class="size-2 shrink-0 self-center rounded-full {card.status.state === 'published'
+						class="size-2 shrink-0 self-center rounded-full {isSettled(card.status)
 							? 'bg-accent'
-							: card.status.blink
-								? 'animate-pulse bg-amber-400'
-								: 'border border-line-strong'}"
+							: 'border border-line-strong'}"
 						aria-hidden="true"
 					></span>
-					<span class={card.status.state === 'published' ? 'text-ink' : 'text-ink-muted'}>
-						{#if card.status.href}
+					<span class={isSettled(card.status) ? 'text-ink' : 'text-ink-muted'}>
+						{statusLabel(card.status)}
+					</span>
+					{#if card.venue}
+						{#if card.venueHref}
 							<a
-								href={card.status.href}
+								href={card.venueHref}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-medium text-accent hover:underline">{card.status.text}</a
+								class="font-medium text-accent hover:underline">{card.venue}</a
 							>
 						{:else}
-							{card.status.text}
+							<span>{card.venue}</span>
 						{/if}
-					</span>
+					{/if}
 				</p>
 
 				{#if card.tags?.length}

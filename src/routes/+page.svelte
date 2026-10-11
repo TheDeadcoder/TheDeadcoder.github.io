@@ -1,5 +1,4 @@
 <script>
-	import Hero from '$components/Hero.svelte';
 	import About from '$components/sections/About.svelte';
 	import Experience from '$components/sections/Experience.svelte';
 	import Projects from '$components/sections/Projects.svelte';
@@ -47,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>{site.name} | {site.role}</title>
+	<title>{site.name}</title>
 	<meta name="description" content={site.description} />
 	<meta name="author" content={site.name} />
 	<meta name="keywords" content={site.keywords.join(', ')} />
@@ -55,7 +54,7 @@
 
 	<meta property="og:type" content="profile" />
 	<meta property="og:site_name" content={site.name} />
-	<meta property="og:title" content="{site.name} | {site.role}" />
+	<meta property="og:title" content={site.name} />
 	<meta property="og:description" content={site.description} />
 	<meta property="og:url" content={site.url} />
 	<meta property="og:image" content="{site.url}{site.ogImage}" />
@@ -67,15 +66,13 @@
 	<meta property="profile:last_name" content="Sakib" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{site.name} | {site.role}" />
+	<meta name="twitter:title" content={site.name} />
 	<meta name="twitter:description" content={site.description} />
 	<meta name="twitter:image" content="{site.url}{site.ogImage}" />
 
 	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</` + `script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify(websiteLd)}</` + `script>`}
 </svelte:head>
-
-<Hero />
 
 <!--
   All panels stay in the DOM and are toggled with `hidden`, so the prerendered

@@ -1,16 +1,20 @@
 import woa from '$lib/logos/woa.png';
 import uiucSrse from '$lib/logos/uiuc-SRSE-2026.png';
 
+/**
+ * Shared by the About view and the Research tab. `status` is one of 'accepted',
+ * 'published', 'preprint', 'under review' or 'ongoing'. The About view lists
+ * every entry except ongoing work and links each title to its first link.
+ */
 export const researchCards = [
 	{
 		title: 'Passing Without Repairing: Verifier Blind Spots in a Live SRE Agent Benchmark',
+		authors: ['Nazmus Sakib'],
+		status: 'accepted',
+		venue: 'NeurIPS 2026 workshop “Who Verifies the Agents?”, poster',
+		venueHref: 'https://verify-agents-workshop.github.io/',
 		description:
 			"With the Service deleted and no agent acting, the benchmark's grader still reports the fault as mitigated, because it only checks Deployment and Pod health.",
-		status: {
-			state: 'published',
-			text: 'Accepted at NeurIPS 2026 Workshop "Who Verifies the Agents?"',
-			href: 'https://verify-agents-workshop.github.io/'
-		},
 		tags: [
 			'AI for SRE',
 			'Benchmark verifiers',
@@ -20,8 +24,8 @@ export const researchCards = [
 			'Pre-registered'
 		],
 		links: [
-			{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' },
-			{ label: 'Read the paper', href: 'https://openreview.net/forum?id=5ijFZfVQoy', icon: 'file' }
+			{ label: 'Paper', href: 'https://neurips.cc/virtual/2026/loc/sydney/173080', icon: 'file' },
+			{ label: 'Code', href: 'https://github.com/TheDeadcoder/SREMut', icon: 'github' }
 		],
 		badges: [
 			{ kind: 'year', text: '2026' },
@@ -29,14 +33,22 @@ export const researchCards = [
 		]
 	},
 	{
+		title:
+			'Seen but Not Bound: LLM Operations Agents Treat Confirmation Policies as a Caution Dial, Not a Gate',
+		authors: ['Nazmus Sakib'],
+		status: 'under review',
+		description:
+			'Agents can tell a production target from staging, yet a confirmation rule meant for production shifts their behavior nearly as much everywhere else.',
+		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/OPharm', icon: 'github' }],
+		badges: [{ kind: 'year', text: '2026' }]
+	},
+	{
 		title: 'Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?',
+		authors: ['Nazmus Sakib'],
+		status: 'preprint',
+		venue: 'arXiv:2609.24144',
 		description:
 			'Giving every rollout in a GRPO group the same luck lifted success under tool faults from 61.8% to 66.8%, but not under grader noise.',
-		status: {
-			state: 'pending',
-			blink: true,
-			text: 'Finalising for TMLR submission'
-		},
 		tags: [
 			'LLM post-training',
 			'GRPO',
@@ -47,8 +59,8 @@ export const researchCards = [
 			'Pre-registered'
 		],
 		links: [
-			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' },
-			{ label: 'arXiv preprint', href: 'https://arxiv.org/abs/2609.24144', icon: 'arxiv' }
+			{ label: 'arXiv', href: 'https://arxiv.org/abs/2609.24144', icon: 'arxiv' },
+			{ label: 'Code', href: 'https://github.com/TheDeadcoder/paired-rollouts', icon: 'github' }
 		],
 		badges: [
 			{ kind: 'year', text: '2026' },
@@ -59,10 +71,7 @@ export const researchCards = [
 		title: 'Clarification Forensics: Does Halting After Clarification Reveal Misunderstanding?',
 		description:
 			"So far, telling Qwen3.5-9B the file is protected drops its protected-file picks from 27 of 36 to 1, but that alone doesn't show it was confused.",
-		status: {
-			state: 'pending',
-			text: 'Ongoing'
-		},
+		status: 'ongoing',
 		tags: ['AI safety', 'Interpretability', 'Model forensics', 'Qwen3.5-9B'],
 		links: [
 			{ label: 'Code', href: 'https://github.com/TheDeadcoder/AI-safety-forensics', icon: 'github' }
@@ -73,18 +82,17 @@ export const researchCards = [
 	},
 	{
 		title:
-			'MemAgent: A cache-inspired framework for augmenting conversational Web Agents with task-specific information',
+			'MemAgent: A Cache-Inspired Framework for Augmenting Conversational Web Agents With Task-Specific Information',
+		authors: ['Nazmus Sakib', 'Protoy Barai', 'Sifat Ishmam Parisa', 'Anindya Iqbal'],
+		status: 'published',
+		venue: 'WOA 2025, CEUR Workshop Proceedings Vol. 4028',
+		venueHref: 'https://ceur-ws.org/Vol-4028/',
 		description:
 			'MemAgent asks for task details once and caches them with an expiry date, so recurring web tasks took 58% less time in a 15-person study.',
 		badges: [
 			{ kind: 'year', text: '2025' },
 			{ kind: 'text', text: 'Peer-reviewed workshop paper' }
 		],
-		status: {
-			state: 'published',
-			text: 'Published in WOA 2025 – 26th Workshop "From Objects to Agents"',
-			href: 'https://ceur-ws.org/Vol-4028/'
-		},
 		lines: [
 			{
 				label: 'Supervised by',
@@ -116,14 +124,27 @@ export const researchCards = [
 		venueLogo: woa,
 		tags: ['Web agents', 'Agent memory', 'Conversational agents'],
 		links: [
+			{ label: 'Paper', href: 'https://ceur-ws.org/Vol-4028/paper8.pdf', icon: 'file' },
 			{
 				label: 'Code',
 				href: 'https://github.com/DialogBased-Interaction/Goal_Alignment',
 				icon: 'github'
-			},
-			{ label: 'Read the paper', href: 'https://ceur-ws.org/Vol-4028/paper8.pdf', icon: 'file' }
+			}
 		]
 	}
+];
+
+/** Papers listed in the About view: every entry except ongoing work. */
+export const papers = researchCards.filter((card) => card.status !== 'ongoing');
+
+/** Shown as pills in the About view. */
+export const focusAreas = [
+	'AI for Software Engineering and SRE',
+	'LLM Post-Training',
+	'AI Safety',
+	'NLP',
+	'Agentic Systems',
+	'Human-Computer Interaction'
 ];
 
 export const researchExperience = {

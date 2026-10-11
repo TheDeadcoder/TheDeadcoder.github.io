@@ -7,14 +7,14 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
 		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
-		<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
-		<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#0e1715" media="(prefers-color-scheme: dark)" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap"
 		/>
 
 		<!-- Resolve the theme before first paint so there is no flash. -->
@@ -26,6 +26,14 @@
 						stored === 'dark' ||
 						(stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
 					document.documentElement.classList.toggle('dark', dark);
+					// A saved choice can differ from the OS, so point both theme-color tags at it.
+					if (stored === 'dark' || stored === 'light') {
+						var color = document
+							.querySelector('meta[name="theme-color"][media*="' + stored + '"]')
+							.getAttribute('content');
+						var metas = document.querySelectorAll('meta[name="theme-color"]');
+						for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', color);
+					}
 				} catch (e) {
 					/* Private mode: fall back to light. */
 				}

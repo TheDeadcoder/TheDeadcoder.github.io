@@ -30,16 +30,18 @@ site.
 
 | File               | Contains                                                    |
 | ------------------ | ----------------------------------------------------------- |
-| `site.js`          | Name, headline, tagline, email, social links, SEO metadata   |
+| `site.js`          | Name, position, bio, email, social links, SEO metadata       |
 | `experience.js`    | Work history (supports nested per-role `projects`)           |
 | `projects.js`      | Project cards, metrics, tech stacks, repo/demo links         |
-| `research.js`      | Publications and research interests                          |
+| `research.js`      | Papers for the About view and Research tab, interests        |
+| `opensource.js`    | Open-source contributions shown in the About view            |
+| `news.js`          | Dated news items shown in the About view                     |
 | `education.js`     | Degrees, honours, coursework, certificate links              |
 | `achievements.js`  | Competitions grouped by year, with certificate images        |
 | `skills.js`        | Skill groups and certifications                              |
 
-Hero statistics are **derived** from these files (role count, project count, first-place wins), so
-they can never fall out of sync with the sections below.
+Papers and open-source entries each carry a single `status` field (for example `'under review'`
+or `'merged'`). Editing that one field updates the word and its marker everywhere it appears.
 
 ### Adding a logo
 
