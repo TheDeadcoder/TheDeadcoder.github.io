@@ -35,7 +35,7 @@ export const researchCards = [
 	{
 		title:
 			'Seen but Not Bound: LLM Operations Agents Treat Confirmation Policies as a Caution Dial, Not a Gate',
-		authors: ['Nazmus Sakib'],
+		authors: ['Nazmus Sakib', 'Md Rizwan Parvez'],
 		status: 'under review',
 		description:
 			'Agents can tell a production target from staging, yet a confirmation rule meant for production shifts their behavior nearly as much everywhere else.',

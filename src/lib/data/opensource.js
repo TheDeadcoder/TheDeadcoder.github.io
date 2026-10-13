@@ -53,7 +53,7 @@ export const openSource = [
 		href: 'https://huggingface.co/Melikshah',
 		status: 'released',
 		summary:
-			'Models and datasets, including a clinical chain-of-thought GPT-OSS-20B in GGUF and GeoQL-4B for text to OverpassQL.',
+			'Models and datasets, including a clinical chain-of-thought GPT-OSS-20B in GGUF with over 4,000 downloads, and GeoQL-4B for text to OverpassQL.',
 		links: [
 			{
 				label: 'gpt-oss-20b-clinical-cot-gguf',
