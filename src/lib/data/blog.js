@@ -5,6 +5,15 @@
  */
 export const posts = [
 	{
+		slug: 'green-checks-broken-clusters',
+		title: 'Green checks, broken clusters: testing the graders of AI SRE benchmarks',
+		summary:
+			'AI agents are now ranked on how well they fix broken Kubernetes applications, and a grading script decides every result. I tested the graders of four such benchmarks. They passed clusters that were still broken, failed fixes that worked, and the usual sanity checks missed most of it.',
+		date: '2026-10-17',
+		readingTime: 10,
+		tags: ['Agent evaluation', 'Benchmarks', 'Software testing', 'Test oracles', 'Kubernetes', 'AI agents']
+	},
+	{
 		slug: 'seen-but-not-bound',
 		title: 'Seen but not bound: AI agents treat a safety rule as a dial, not a gate',
 		summary:

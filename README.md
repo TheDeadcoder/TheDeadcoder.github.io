@@ -54,10 +54,10 @@ or `'merged'`). Editing that one field updates the word and its marker everywher
    `Figure` (numbered caption, `wide` to run past the text column), `TruthTable`, `BarChart`,
    `Dumbbell`, `StatGrid`, `Callout`, `PaperCard` and `References`. Cite with
    `<a class="cite" href="#ref-1">1</a>`.
-3. Optionally add `src/lib/blog/<slug>/Cover.svelte` for the image on the Blog tab.
+3. Add `src/lib/blog/<slug>/Cover.svelte` for the post's image on the Blog tab.
 
-The newest post is featured on the Blog tab and older ones are listed below it. Each post is
-prerendered at `/blog/<slug>` and added to the sitemap automatically.
+Every post appears on the Blog tab as the same card (cover, date, title, summary, tags), newest
+first. Each post is prerendered at `/blog/<slug>` and added to the sitemap automatically.
 
 ### Adding a logo
 
