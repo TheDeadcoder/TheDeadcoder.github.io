@@ -7,7 +7,8 @@ export const tabs = [
 	{ id: 'education', label: 'Education', icon: 'cap' },
 	{ id: 'projects', label: 'Projects', icon: 'layers' },
 	{ id: 'achievements', label: 'Achievements', icon: 'trophy' },
-	{ id: 'skills', label: 'Skills', icon: 'sparkles' }
+	{ id: 'skills', label: 'Skills', icon: 'sparkles' },
+	{ id: 'blog', label: 'Blog', icon: 'book' },
 ];
 
 const ids = tabs.map((t) => t.id);
@@ -52,6 +53,16 @@ export function setTab(id, opts = {}) {
 	}
 }
 
+/**
+ * Pick the tab named by a URL hash. Used when navigating to the home page from
+ * another route (a blog post), before the panels render.
+ *
+ * @param {string} hash
+ */
+export function syncTab(hash) {
+	tabState.active = normalise(hash) ?? DEFAULT_TAB;
+}
+
 /** Wire up deep links and browser history. Returns a teardown function. */
 export function initTabs() {
 	if (!browser) return () => {};
@@ -66,6 +77,8 @@ export function initTabs() {
 	}
 
 	const onPop = () => {
+		// Hash links on other routes (a post's references) are not tab switches.
+		if (window.location.pathname !== '/') return;
 		const id = normalise(window.location.hash) ?? DEFAULT_TAB;
 		tabState.active = id;
 	};

@@ -1,17 +1,26 @@
 <script>
 	import Icon from './Icon.svelte';
+	import { page } from '$app/state';
 	import { tabs, tabState, setTab } from '$lib/tabs.svelte.js';
 
 	/** @type {HTMLDivElement | undefined} */
 	let strip = $state();
-	/** @type {HTMLButtonElement[]} */
-	let buttons = $state([]);
+	/** @type {HTMLElement[]} */
+	let items = $state([]);
 	let indicator = $state({ left: 0, width: 0, ready: false });
 
+	// Tabs on the home page; on other routes (a blog post) they become links back to it.
+	let home = $derived(page.url.pathname === '/');
+	let active = $derived(
+		home ? tabState.active : page.url.pathname.startsWith('/blog/') ? 'blog' : ''
+	);
+
 	function measure() {
-		const i = tabs.findIndex((t) => t.id === tabState.active);
-		const el = buttons[i];
-		if (!el || !strip) return;
+		const el = items[tabs.findIndex((t) => t.id === active)];
+		if (!el || !strip) {
+			if (indicator.ready) indicator = { ...indicator, ready: false };
+			return;
+		}
 		indicator = { left: el.offsetLeft, width: el.offsetWidth, ready: true };
 	}
 
@@ -19,12 +28,12 @@
 
 	$effect(() => {
 		// Re-measure whenever the active tab changes.
-		tabState.active;
+		active;
 		measure();
 
 		// Keep the active tab visible in the scrollable strip. Done by setting
 		// scrollLeft rather than scrollIntoView so the page itself never moves.
-		const el = buttons[tabs.findIndex((t) => t.id === tabState.active)];
+		const el = items[tabs.findIndex((t) => t.id === active)];
 		if (!el || !strip) return;
 		const target = el.offsetLeft - (strip.clientWidth - el.offsetWidth) / 2;
 		const left = Math.max(0, Math.min(target, strip.scrollWidth - strip.clientWidth));
@@ -50,18 +59,11 @@
 		if (next < 0) return;
 		e.preventDefault();
 		setTab(tabs[next].id, { scroll: false });
-		buttons[next]?.focus();
+		items[next]?.focus();
 	}
 </script>
 
-<div
-	bind:this={strip}
-	role="tablist"
-	tabindex="-1"
-	aria-label="Portfolio sections"
-	onkeydown={onKeydown}
-	class="no-scrollbar relative flex w-full gap-1 overflow-x-auto scroll-smooth focus:outline-none"
->
+<div bind:this={strip} class="no-scrollbar relative flex w-full overflow-x-auto scroll-smooth">
 	{#if indicator.ready}
 		<span
 			aria-hidden="true"
@@ -70,22 +72,48 @@
 		></span>
 	{/if}
 
-	{#each tabs as tab, i (tab.id)}
-		{@const selected = tabState.active === tab.id}
-		<button
-			bind:this={buttons[i]}
-			type="button"
-			role="tab"
-			id="tab-{tab.id}"
-			aria-selected={selected}
-			aria-controls={tab.id}
-			tabindex={selected ? 0 : -1}
-			onclick={() => setTab(tab.id)}
-			class="relative z-1 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-[13.5px] font-medium whitespace-nowrap transition-colors duration-200
-				{selected ? 'text-ink' : 'text-ink-subtle hover:text-ink'}"
+	{#if home}
+		<div
+			role="tablist"
+			tabindex="-1"
+			aria-label="Portfolio sections"
+			onkeydown={onKeydown}
+			class="flex gap-1 focus:outline-none"
 		>
-			<Icon name={tab.icon} size={15} class="opacity-70" />
-			{tab.label}
-		</button>
-	{/each}
+			{#each tabs as tab, i (tab.id)}
+				{@const selected = active === tab.id}
+				<button
+					bind:this={items[i]}
+					type="button"
+					role="tab"
+					id="tab-{tab.id}"
+					aria-selected={selected}
+					aria-controls={tab.id}
+					tabindex={selected ? 0 : -1}
+					onclick={() => setTab(tab.id)}
+					class="relative z-1 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-[13.5px] font-medium whitespace-nowrap transition-colors duration-200
+						{selected ? 'text-ink' : 'text-ink-subtle hover:text-ink'}"
+				>
+					<Icon name={tab.icon} size={15} class="opacity-70" />
+					{tab.label}
+				</button>
+			{/each}
+		</div>
+	{:else}
+		<nav aria-label="Portfolio sections" class="flex gap-1">
+			{#each tabs as tab, i (tab.id)}
+				{@const selected = active === tab.id}
+				<a
+					bind:this={items[i]}
+					href="/#{tab.id}"
+					aria-current={selected ? 'page' : undefined}
+					class="relative z-1 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-[13.5px] font-medium whitespace-nowrap transition-colors duration-200
+						{selected ? 'text-ink' : 'text-ink-subtle hover:text-ink'}"
+				>
+					<Icon name={tab.icon} size={15} class="opacity-70" />
+					{tab.label}
+				</a>
+			{/each}
+		</nav>
+	{/if}
 </div>

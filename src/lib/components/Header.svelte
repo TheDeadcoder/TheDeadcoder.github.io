@@ -2,6 +2,7 @@
 	import Icon from './Icon.svelte';
 	import TabBar from './TabBar.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import { page } from '$app/state';
 	import { site } from '$data/site.js';
 	import { setTab, DEFAULT_TAB } from '$lib/tabs.svelte.js';
 
@@ -19,6 +20,7 @@
 			<a
 				href="/"
 				onclick={(e) => {
+					if (page.url.pathname !== '/') return;
 					e.preventDefault();
 					setTab(DEFAULT_TAB, { scroll: false });
 					window.scrollTo({ top: 0, behavior: 'smooth' });

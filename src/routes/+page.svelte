@@ -6,6 +6,7 @@
 	import Education from '$components/sections/Education.svelte';
 	import Achievements from '$components/sections/Achievements.svelte';
 	import Skills from '$components/sections/Skills.svelte';
+	import Blog from '$components/sections/Blog.svelte';
 
 	import { site, socials } from '$data/site.js';
 	import { tabs, tabState } from '$lib/tabs.svelte.js';
@@ -15,6 +16,7 @@
 		experience: Experience,
 		projects: Projects,
 		research: Research,
+		blog: Blog,
 		education: Education,
 		achievements: Achievements,
 		skills: Skills

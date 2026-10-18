@@ -7,6 +7,7 @@
 			'<rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/>',
 		arrowUp: '<path d="M12 19V5M5 12l7-7 7 7"/>',
 		arrowRight: '<path d="M5 12h14M12 5l7 7-7 7"/>',
+		arrowLeft: '<path d="M19 12H5M12 19l-7-7 7-7"/>',
 		arrowUpRight: '<path d="M7 17 17 7M7 7h10v10"/>',
 		external:
 			'<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',

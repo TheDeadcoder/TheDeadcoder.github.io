@@ -3,20 +3,26 @@
 	import Header from '$components/Header.svelte';
 	import Footer from '$components/Footer.svelte';
 	import Icon from '$components/Icon.svelte';
+	import { beforeNavigate } from '$app/navigation';
 	import { initTheme } from '$lib/theme.svelte.js';
-	import { initTabs } from '$lib/tabs.svelte.js';
+	import { initTabs, syncTab } from '$lib/tabs.svelte.js';
 
 	let { children } = $props();
 	let showTop = $state(false);
 
 	$effect(() => initTheme());
 	$effect(() => initTabs());
+
+	// Coming home from a post (/#blog), open the right panel before it renders.
+	beforeNavigate(({ from, to }) => {
+		if (to?.url.pathname === '/' && from?.url.pathname !== '/') syncTab(to.url.hash);
+	});
 </script>
 
 <svelte:window onscroll={() => (showTop = window.scrollY > 600)} />
 
 <a
-	href="#panels"
+	href="#main"
 	class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-100 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-accent-contrast"
 >
 	Skip to content
@@ -24,7 +30,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<Header />
-	<main class="flex-1">
+	<main id="main" class="flex-1">
 		{@render children()}
 	</main>
 	<Footer />

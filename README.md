@@ -12,12 +12,14 @@ npm run preview
 
 ## How it's put together
 
-There is exactly **one route** (`/`). Every section is a tab panel on that page, so there are no
-sub-paths to break, no client-side router, and no 404s on refresh. Tabs are deep-linkable through
-the URL fragment (`/#projects`, `/#experience`, …), which the browser back button understands.
+The portfolio is **one route** (`/`). Every section is a tab panel on that page, so there are no
+sub-paths to break and no 404s on refresh. Tabs are deep-linkable through the URL fragment
+(`/#projects`, `/#blog`, …), which the browser back button understands. Blog posts are the one
+exception: each is prerendered at its own URL, `/blog/<slug>`, and on those pages the tab bar
+becomes links back to the home page.
 
-All seven panels stay in the DOM. Inactive ones carry the `hidden` attribute, so the prerendered
-HTML contains the entire portfolio for crawlers while the interface stays tabbed for humans.
+All panels stay in the DOM. Inactive ones carry the `hidden` attribute, so the prerendered HTML
+contains the entire portfolio for crawlers while the interface stays tabbed for humans.
 
 Old section URLs from the previous version (`/projects`, `/education`, `/skill_certifications`, …)
 are caught by `src/routes/+error.svelte` and redirected to the matching tab, so existing inbound
@@ -36,12 +38,26 @@ site.
 | `research.js`      | Papers for the About view and Research tab, interests        |
 | `opensource.js`    | Open-source contributions shown in the About view            |
 | `news.js`          | Dated news items shown in the About view                     |
+| `blog.js`          | Blog posts: slug, title, summary, date, reading time, tags   |
 | `education.js`     | Degrees, honours, coursework, certificate links              |
 | `achievements.js`  | Competitions grouped by year, with certificate images        |
 | `skills.js`        | Skill groups and certifications                              |
 
 Papers and open-source entries each carry a single `status` field (for example `'under review'`
 or `'merged'`). Editing that one field updates the word and its marker everywhere it appears.
+
+### Adding a blog post
+
+1. Add an entry to the top of `posts` in `src/lib/data/blog.js` (newest first).
+2. Write the article in `src/lib/blog/<slug>/Post.svelte`. Plain `p`, `h2`, `h3`, `ul` and `ol`
+   are styled by the post layout. For visuals, use the components in `src/lib/components/blog/`:
+   `Figure` (numbered caption, `wide` to run past the text column), `TruthTable`, `BarChart`,
+   `Dumbbell`, `StatGrid`, `Callout`, `PaperCard` and `References`. Cite with
+   `<a class="cite" href="#ref-1">1</a>`.
+3. Optionally add `src/lib/blog/<slug>/Cover.svelte` for the image on the Blog tab.
+
+The newest post is featured on the Blog tab and older ones are listed below it. Each post is
+prerendered at `/blog/<slug>` and added to the sitemap automatically.
 
 ### Adding a logo
 

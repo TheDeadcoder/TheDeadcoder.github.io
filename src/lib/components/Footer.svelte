@@ -1,5 +1,6 @@
 <script>
 	import Icon from './Icon.svelte';
+	import { page } from '$app/state';
 	import { site, socials } from '$data/site.js';
 	import { tabs, setTab } from '$lib/tabs.svelte.js';
 
@@ -59,8 +60,9 @@
 					{#each tabs as tab (tab.id)}
 						<li>
 							<a
-								href="#{tab.id}"
+								href="/#{tab.id}"
 								onclick={(e) => {
+									if (page.url.pathname !== '/') return;
 									e.preventDefault();
 									setTab(tab.id);
 								}}

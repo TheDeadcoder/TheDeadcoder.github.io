@@ -1,4 +1,5 @@
 import { site } from '$data/site.js';
+import { posts } from '$data/blog.js';
 
 export const prerender = true;
 
@@ -23,6 +24,14 @@ export function GET() {
       <image:title>${site.name} | ${site.role}</image:title>
     </image:image>
   </url>
+${posts
+	.map(
+		(post) => `  <url>
+    <loc>${site.url}/blog/${post.slug}</loc>
+    <lastmod>${post.date}</lastmod>
+  </url>`
+	)
+	.join('\n')}
 </urlset>
 `;
 

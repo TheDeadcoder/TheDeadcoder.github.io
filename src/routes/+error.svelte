@@ -17,7 +17,9 @@
 		projects: 'projects',
 		skill_certifications: 'skills',
 		skills: 'skills',
-		about: 'about'
+		about: 'about',
+		blog: 'blog',
+		blogs: 'blog'
 	};
 
 	let redirecting = $state(false);
