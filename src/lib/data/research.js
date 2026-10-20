@@ -43,6 +43,23 @@ export const researchCards = [
 		badges: [{ kind: 'year', text: '2026' }]
 	},
 	{
+		title: 'FaithfulCut',
+		status: 'under review',
+		venue: 'ICSE 2027 Industry Challenge Track',
+		description:
+			'Replayed with only the results a deployed selector could see, a leading history-based test selector let nearly three times as many failing builds slip through, while selectors that read the change barely noticed.',
+		tags: [
+			'Software testing',
+			'Continuous integration',
+			'Test selection',
+			'Evaluation methodology',
+			'LLMs',
+			'Pre-registered'
+		],
+		links: [{ label: 'Code', href: 'https://github.com/TheDeadcoder/FaithfulCut', icon: 'github' }],
+		badges: [{ kind: 'year', text: '2026' }]
+	},
+	{
 		title: 'Luck Is Not Skill: When Do Paired Rollouts Help Group-Relative RL of LLM Agents?',
 		authors: ['Nazmus Sakib'],
 		status: 'preprint',

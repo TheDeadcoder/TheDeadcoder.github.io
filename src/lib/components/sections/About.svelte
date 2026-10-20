@@ -149,11 +149,13 @@
 								class={titleLink}>{paper.title}</a
 							>
 						</h3>
-						<p class="mt-1.5 text-sm text-ink-muted">
-							{#each paper.authors ?? [] as author, i (author)}{i > 0 ? ', ' : ''}<span
-									class={author === site.name ? 'font-semibold text-ink' : ''}>{author}</span
-								>{/each}
-						</p>
+						{#if paper.authors?.length}
+							<p class="mt-1.5 text-sm text-ink-muted">
+								{#each paper.authors as author, i (author)}{i > 0 ? ', ' : ''}<span
+										class={author === site.name ? 'font-semibold text-ink' : ''}>{author}</span
+									>{/each}
+							</p>
+						{/if}
 						<p class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-sm text-ink-muted">
 							{@render status(paper.status)}
 							{#if paper.venue}<span>{paper.venue}</span>{/if}
@@ -179,12 +181,16 @@
 								>{item.name}</a
 							>
 						</h3>
-						<p class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-sm text-ink-muted">
-							{@render status(item.status)}
-							{#if item.tagline}<span>{item.tagline}</span>{/if}
-						</p>
-						<p class="mt-2.5">{item.summary}</p>
-						{@render textLinks(item.links)}
+						{#if item.tagline}<p class="mt-0.5 text-sm text-ink-muted">{item.tagline}</p>{/if}
+						<ul class="mt-3 space-y-5">
+							{#each item.contributions as contribution (contribution.links[0].href)}
+								<li>
+									<p class="text-sm">{@render status(contribution.status)}</p>
+									<p class="mt-1.5">{contribution.summary}</p>
+									{@render textLinks(contribution.links)}
+								</li>
+							{/each}
+						</ul>
 					</li>
 				{/each}
 			</ul>

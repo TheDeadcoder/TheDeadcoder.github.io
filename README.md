@@ -43,8 +43,9 @@ site.
 | `achievements.js`  | Competitions grouped by year, with certificate images        |
 | `skills.js`        | Skill groups and certifications                              |
 
-Papers and open-source entries each carry a single `status` field (for example `'under review'`
-or `'merged'`). Editing that one field updates the word and its marker everywhere it appears.
+Each paper, and each contribution under an open-source project, carries a single `status` field
+(for example `'under review'` or `'merged'`). Editing that one field updates the word and its
+marker everywhere it appears. A project with several contributions lists them newest first.
 
 ### Adding a blog post
 
