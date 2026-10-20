@@ -27,7 +27,23 @@ export const posts = [
 			'AI agents',
 			'AI safety',
 			'Benchmarks',
-			
+
+		]
+	},
+	{
+		slug: 'skipped-tests-tell-no-tales',
+		title: 'Skipped tests tell no tales: the hidden cost of test selection in CI',
+		summary:
+			'CI runs every test on every change, and test selection promises to skip most of them safely. But a selector in production never learns how the tests it skipped would have done, while the replays used to judge it quietly tell it. Replayed honestly, a leading history-based selector let nearly three times as many failing builds slip through, while selectors that read the change barely noticed.',
+		date: '2026-10-01',
+		readingTime: 10,
+		tags: [
+			'Software testing',
+			'Continuous integration',
+			'Test selection',
+			'Evaluation methodology',
+			'LLMs',
+			'Pre-registered'
 		]
 	}
 ];
