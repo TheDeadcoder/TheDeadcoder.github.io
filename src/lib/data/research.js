@@ -44,6 +44,7 @@ export const researchCards = [
 	},
 	{
 		title: 'FaithfulCut',
+		authors: ['Nazmus Sakib'],
 		status: 'under review',
 		venue: 'ICSE 2027 Industry Challenge Track',
 		description:
