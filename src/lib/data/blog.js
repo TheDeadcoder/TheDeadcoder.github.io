@@ -45,5 +45,21 @@ export const posts = [
 			'LLMs',
 			'Pre-registered'
 		]
+	},
+	{
+		slug: 'luck-is-not-skill',
+		title: 'Luck is not skill: giving every rollout the same bad luck',
+		summary:
+			'Group-relative RL trains an LLM agent by comparing attempts at the same task, but a tool outage or a grading slip can make luck look like skill. I gave every attempt in a group the same luck. Comparisons got cleaner and gradient noise dropped at every checkpoint, and under tool faults the agent finished five points ahead, but the learning-curve tests I registered in advance did not pass.',
+		date: '2026-09-09',
+		readingTime: 11,
+		tags: [
+			'Reinforcement learning',
+			'GRPO',
+			'LLM agents',
+			'Tool-use agents',
+			'Common random numbers',
+			'Pre-registered'
+		]
 	}
 ];
