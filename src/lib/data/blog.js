@@ -57,9 +57,26 @@ export const posts = [
 			'Reinforcement learning',
 			'GRPO',
 			'LLM agents',
+			'Stochastic environment',
 			'Tool-use agents',
 			'Common random numbers',
 			'Pre-registered'
+		]
+	},
+	{
+		slug: 'when-the-cooling-fails',
+		title: 'When the cooling fails: teaching a 7B model to run a datacenter',
+		summary:
+			'Datacenter operators keep cooling and power alive by reading a dashboard and typing the right command. I built a physics simulator of that job and trained a 7B model in it, first by imitating a larger reasoning model and then with reinforcement learning against the live simulation. It went from waiting to acting, but it never resolved a hard incident, and a closer look at the evaluation changes what its numbers can claim.',
+		date: '2026-05-16',
+		readingTime: 10,
+		tags: [
+			'Reinforcement learning',
+			'GRPO',
+			'LLM agents',
+			'Knowledge distillation',
+			'Agent evaluation',
+			'Physical AI'
 		]
 	}
 ];
