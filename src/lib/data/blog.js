@@ -45,5 +45,38 @@ export const posts = [
 			'LLMs',
 			'Pre-registered'
 		]
+	},
+	{
+		slug: 'luck-is-not-skill',
+		title: 'Luck is not skill: giving every rollout the same bad luck',
+		summary:
+			'Group-relative RL trains an LLM agent by comparing attempts at the same task, but a tool outage or a grading slip can make luck look like skill. I gave every attempt in a group the same luck. Comparisons got cleaner and gradient noise dropped at every checkpoint, and under tool faults the agent finished five points ahead, but the learning-curve tests I registered in advance did not pass.',
+		date: '2026-09-09',
+		readingTime: 11,
+		tags: [
+			'Reinforcement learning',
+			'GRPO',
+			'LLM agents',
+			'Stochastic environment',
+			'Tool-use agents',
+			'Common random numbers',
+			'Pre-registered'
+		]
+	},
+	{
+		slug: 'when-the-cooling-fails',
+		title: 'When the cooling fails: teaching a 7B model to run a datacenter',
+		summary:
+			'Datacenter operators keep cooling and power alive by reading a dashboard and typing the right command. I built a physics simulator of that job and trained a 7B model in it, first by imitating a larger reasoning model and then with reinforcement learning against the live simulation. It went from waiting to acting, but it never resolved a hard incident, and a closer look at the evaluation changes what its numbers can claim.',
+		date: '2026-05-16',
+		readingTime: 10,
+		tags: [
+			'Reinforcement learning',
+			'GRPO',
+			'LLM agents',
+			'Knowledge distillation',
+			'Agent evaluation',
+			'Physical AI'
+		]
 	}
 ];
