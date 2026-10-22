@@ -10,6 +10,14 @@
 
 	let post = $derived(data.post);
 	let url = $derived(`${site.url}/blog/${post.slug}`);
+	let writers = $derived(post.authors ?? [{ name: site.name, position: site.position.join(', ') }]);
+	let people = $derived(
+		writers.map((writer) => ({
+			'@type': 'Person',
+			name: writer.name,
+			...(writer.name === site.name ? { url: site.url } : {})
+		}))
+	);
 	let jsonLd = $derived({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -20,14 +28,14 @@
 		url,
 		mainEntityOfPage: url,
 		image: `${site.url}${site.ogImage}`,
-		author: { '@type': 'Person', name: site.name, url: site.url }
+		author: people.length === 1 ? people[0] : people
 	});
 </script>
 
 <svelte:head>
 	<title>{post.title} | {site.name}</title>
 	<meta name="description" content={post.summary} />
-	<meta name="author" content={site.name} />
+	<meta name="author" content={writers.map((writer) => writer.name).join(', ')} />
 	<link rel="canonical" href={url} />
 
 	<meta property="og:type" content="article" />
@@ -81,8 +89,20 @@
 		</div>
 
 		<footer class="mt-14 border-t border-line pt-8">
-			<p class="font-medium text-ink">{site.name}</p>
-			<p class="mt-0.5 text-[15px] text-ink-muted">{site.position.join(', ')}</p>
+			{#if writers.length > 1}
+				<p class="text-[13px] font-medium text-ink-muted">Written by</p>
+				<ul class="mt-3 grid gap-x-6 gap-y-4 sm:grid-cols-3">
+					{#each writers as writer (writer.name)}
+						<li>
+							<p class="font-medium text-ink">{writer.name}</p>
+							<p class="mt-0.5 text-[14px] leading-snug text-ink-muted">{writer.position}</p>
+						</li>
+					{/each}
+				</ul>
+			{:else}
+				<p class="font-medium text-ink">{writers[0].name}</p>
+				<p class="mt-0.5 text-[15px] text-ink-muted">{writers[0].position}</p>
+			{/if}
 
 			{#if data.older || data.newer}
 				<nav aria-label="More posts" class="mt-8 grid gap-3 sm:grid-cols-2">
