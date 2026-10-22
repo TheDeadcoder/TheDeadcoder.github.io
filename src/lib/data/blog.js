@@ -1,9 +1,33 @@
 /**
  * Blog posts, newest first. Each post lives in its own folder:
  * src/lib/blog/<slug>/Post.svelte holds the article and an optional
- * src/lib/blog/<slug>/Cover.svelte is the image on the Blog tab.
+ * src/lib/blog/<slug>/Cover.svelte is the image on the Blog tab. `authors` is optional and
+ * defaults to the site owner.
+ * @type {{ slug: string, title: string, summary: string, date: string, readingTime: number, tags: string[], authors?: { name: string, position: string }[] }[]}
  */
 export const posts = [
+	{
+		slug: 'audit-the-group-not-the-patch',
+		title: 'Audit the group, not the patch: full-suite rewards for coding agents at a fraction of the cost',
+		summary:
+			'Coding agents learn from test results, but training pipelines often run only the tests the original fix touched. In repositories with large test suites, about 1 in 22 patches that pass those tests break code elsewhere, and smarter test selection misses many of them. Randomly auditing whole groups of attempts recovers the full suite’s verdict without bias, at under a quarter of the test time.',
+		date: '2026-10-23',
+		readingTime: 10,
+		tags: [
+			'Reinforcement learning',
+			'GRPO',
+			'Coding agents',
+			'Software testing',
+			'Regression testing',
+			'Test oracles',
+			'Pre-registered'
+		],
+		authors: [
+			{ name: 'Nazmus Sakib', position: 'Lecturer, Computer Science and Engineering, BRAC University' },
+			{ name: 'Sadif Ahmed', position: 'Lecturer, Computer Science and Engineering, BRAC University' },
+			{ name: 'Nafiu Rahman', position: 'Lecturer, Computer Science and Engineering, BRAC University' }
+		]
+	},
 	{
 		slug: 'green-checks-broken-clusters',
 		title: 'Green checks, broken clusters: testing the graders of AI SRE benchmarks',
