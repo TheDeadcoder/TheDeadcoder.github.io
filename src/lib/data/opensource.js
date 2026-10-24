@@ -9,7 +9,7 @@ export const openSource = [
 		tagline: 'Live benchmark for AI SRE agents',
 		contributions: [
 			{
-				status: 'in review',
+				status: 'merged',
 				summary:
 					"Reported that the alert check can fail a correct fix while the fault's own alerts are still clearing, so faster fixes failed more often, and opened a fix that waits for alerts to resolve.",
 				links: [
