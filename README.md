@@ -35,8 +35,9 @@ site.
 | `site.js`          | Name, position, bio, email, social links, SEO metadata       |
 | `experience.js`    | Work history (supports nested per-role `projects`)           |
 | `projects.js`      | Project cards, metrics, tech stacks, repo/demo links         |
+| `environments.js`  | RL and benchmark environments in the Projects tab            |
 | `research.js`      | Papers for the About view and Research tab, interests        |
-| `opensource.js`    | Open-source contributions shown in the About view            |
+| `opensource.js`    | Open-source contributions for the Projects tab and About view |
 | `news.js`          | Dated news items shown in the About view                     |
 | `blog.js`          | Blog posts: slug, title, summary, date, reading time, tags   |
 | `education.js`     | Degrees, honours, coursework, certificate links              |
@@ -45,7 +46,8 @@ site.
 
 Each paper, and each contribution under an open-source project, carries a single `status` field
 (for example `'under review'` or `'merged'`). Editing that one field updates the word and its
-marker everywhere it appears. A project with several contributions lists them newest first.
+marker everywhere it appears. A project with several contributions lists them newest first. The
+Projects tab lists every open-source project; the About view leaves out those marked `home: false`.
 
 ### Adding a blog post
 

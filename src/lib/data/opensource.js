@@ -1,8 +1,50 @@
 /**
- * Shown in the About view, in this order. Each project lists its contributions,
- * newest first. status: 'merged' | 'in review' | 'released'
+ * Every open-source project, in display order. The Projects tab lists them all; the
+ * About view leaves out projects marked `home: false`. Each project lists its
+ * contributions, newest first. status: 'merged' | 'in review' | 'released'
  */
-export const openSource = [
+export const allOpenSource = [
+	{
+		name: 'OpenEnv',
+		href: 'https://github.com/openenv/OpenEnv',
+		tagline: 'Interface library for RL post-training with environments',
+		home: false,
+		contributions: [
+			{
+				status: 'merged',
+				summary:
+					'Reported and fixed rubrics that kept a nested child’s state across environment resets, so a trajectory rubric inside a container carried one episode into the next. Resetting a rubric now resets its children.',
+				links: [
+					{ label: 'Issue #1533', href: 'https://github.com/openenv/OpenEnv/issues/1533' },
+					{ label: 'Pull request #1535', href: 'https://github.com/openenv/OpenEnv/pull/1535' }
+				]
+			}
+		]
+	},
+	{
+		name: 'CloudOpsBench',
+		href: 'https://github.com/CloudOpsBench/CloudOpsBench',
+		tagline: 'Benchmark of real-world cloud operations tasks for AI agents',
+		home: false,
+		contributions: [
+			{
+				status: 'in review',
+				summary:
+					'Audited the v1.0 graders and grouped the defects by root cause: checks that pass when nothing was done, fail correct work or crash. Opened the first fixes: CI now runs every unit test, and the Kinesis policy grader checks that only the producer can write.',
+				links: [
+					{ label: 'Issue #14', href: 'https://github.com/CloudOpsBench/CloudOpsBench/issues/14' },
+					{
+						label: 'Pull request #15',
+						href: 'https://github.com/CloudOpsBench/CloudOpsBench/pull/15'
+					},
+					{
+						label: 'Pull request #16',
+						href: 'https://github.com/CloudOpsBench/CloudOpsBench/pull/16'
+					}
+				]
+			}
+		]
+	},
 	{
 		name: 'SREGym',
 		href: 'https://github.com/SREGym/SREGym',
@@ -101,3 +143,6 @@ export const openSource = [
 		]
 	}
 ];
+
+/** Shown in the About view, in this order. */
+export const openSource = allOpenSource.filter((project) => project.home !== false);
