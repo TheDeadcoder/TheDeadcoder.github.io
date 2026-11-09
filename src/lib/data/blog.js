@@ -7,6 +7,23 @@
  */
 export const posts = [
 	{
+		slug: 'workaround-outlives-the-fix',
+		title: 'The workaround outlives the fix: what AI agents teach each other about their guard',
+		summary:
+			'When a guard wrongly blocks an AI agent, the agent may find another way and write it into the notes it leaves for the next shift. I built a traced sandbox to see whether those notes still help a later reader once the guard is fixed. Rerunning the notes’ commands found nothing, but a model that read the notes got past the fixed guard in 58% of attempts, against 2% for notes from teams that never met the false positives.',
+		date: '2026-11-09',
+		readingTime: 9,
+		tags: [
+			'AI safety',
+			'AI control',
+			'Agent oversight',
+			'Multi-agent systems',
+			'LLM agents',
+			'Sandboxes',
+			'Pre-registered'
+		]
+	},
+	{
 		slug: 'audit-the-group-not-the-patch',
 		title: 'Audit the group, not the patch: full-suite rewards for coding agents at a fraction of the cost',
 		summary:
