@@ -5,8 +5,12 @@
 	import { formatDate } from '$lib/format.js';
 
 	/** @typedef {(typeof import('$data/blog.js').posts)[number]} Post */
-	/** @type {{ data: { post: Post, newer: Post | null, older: Post | null, Body: import('svelte').Component } }} */
+	/** @type {{ data: { post: Post, more: Post[], Body: import('svelte').Component } }} */
 	let { data } = $props();
+
+	const covers = /** @type {Record<string, import('svelte').Component>} */ (
+		import.meta.glob('/src/lib/blog/*/Cover.svelte', { eager: true, import: 'default' })
+	);
 
 	let post = $derived(data.post);
 	let url = $derived(`${site.url}/blog/${post.slug}`);
@@ -103,43 +107,52 @@
 				<p class="font-medium text-ink">{writers[0].name}</p>
 				<p class="mt-0.5 text-[15px] text-ink-muted">{writers[0].position}</p>
 			{/if}
-
-			{#if data.older || data.newer}
-				<nav aria-label="More posts" class="mt-8 grid gap-3 sm:grid-cols-2">
-					{#if data.older}
-						<a
-							href="/blog/{data.older.slug}"
-							class="rounded-xl border border-line bg-surface p-4 transition-colors hover:border-line-strong"
-						>
-							<span class="text-[13px] text-ink-muted">Older post</span>
-							<span class="mt-1 block font-serif text-lg leading-snug font-medium"
-								>{data.older.title}</span
-							>
-						</a>
-					{/if}
-					{#if data.newer}
-						<a
-							href="/blog/{data.newer.slug}"
-							class="rounded-xl border border-line bg-surface p-4 transition-colors hover:border-line-strong sm:col-start-2"
-						>
-							<span class="text-[13px] text-ink-muted">Newer post</span>
-							<span class="mt-1 block font-serif text-lg leading-snug font-medium"
-								>{data.newer.title}</span
-							>
-						</a>
-					{/if}
-				</nav>
-			{/if}
-
-			<a
-				href="/#blog"
-				class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-accent underline decoration-accent/35 underline-offset-4 transition-colors hover:decoration-accent"
-			>
-				<Icon name="arrowLeft" size={15} />
-				All posts
-			</a>
 		</footer>
 	</div>
+
+	<section aria-labelledby="more-posts" class="mx-auto mt-16 max-w-5xl">
+		{#if data.more.length}
+			<h2 id="more-posts" class="font-serif text-[26px] leading-tight font-medium lg:text-[30px]">
+				More posts
+			</h2>
+			<div class="mt-6 grid gap-4 md:grid-cols-3">
+				{#each data.more as other (other.slug)}
+					{@const Cover = covers[`/src/lib/blog/${other.slug}/Cover.svelte`]}
+					<article
+						class="relative flex flex-col rounded-2xl border border-line bg-surface p-3 transition-colors hover:border-line-strong"
+					>
+						<div class="aspect-[16/10] overflow-hidden rounded-xl bg-surface-2">
+							{#if Cover}<Cover />{/if}
+						</div>
+						<div class="px-2 pt-4 pb-2">
+							<p class="flex flex-wrap gap-x-3 gap-y-0.5 text-[12.5px] text-ink-muted">
+								<time datetime={other.date}>{formatDate(other.date)}</time>
+								<span>{other.readingTime} min read</span>
+							</p>
+							<h3 class="mt-1.5 font-serif text-[19px] leading-snug font-medium">
+								<a
+									href="/blog/{other.slug}"
+									class="transition-colors after:absolute after:inset-0 after:rounded-2xl hover:text-accent"
+									>{other.title}</a
+								>
+							</h3>
+							<p class="mt-2 line-clamp-3 text-[14px] leading-relaxed text-ink-muted">
+								{other.summary}
+							</p>
+						</div>
+					</article>
+				{/each}
+			</div>
+		{/if}
+
+		<a
+			href="/#blog"
+			class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-accent underline decoration-accent/35 underline-offset-4 transition-colors hover:decoration-accent"
+		>
+			<Icon name="arrowLeft" size={15} />
+			All posts
+		</a>
+	</section>
 </article>
 
 <style>

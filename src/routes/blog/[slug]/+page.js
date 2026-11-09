@@ -13,10 +13,19 @@ export async function load({ params }) {
 	if (index === -1 || !body) error(404, 'Not found');
 
 	const module = /** @type {{ default: import('svelte').Component }} */ (await body());
-	return {
-		post: posts[index],
-		newer: posts[index - 1] ?? null,
-		older: posts[index + 1] ?? null,
-		Body: module.default
-	};
+	const post = posts[index];
+
+	// Three other posts: those sharing the most tags first, then the nearest in time.
+	const more = posts
+		.map((other, i) => ({
+			other,
+			shared: other.tags.filter((tag) => post.tags.includes(tag)).length,
+			distance: Math.abs(i - index)
+		}))
+		.filter(({ other }) => other.slug !== post.slug)
+		.sort((a, b) => b.shared - a.shared || a.distance - b.distance)
+		.slice(0, 3)
+		.map(({ other }) => other);
+
+	return { post, more, Body: module.default };
 }
