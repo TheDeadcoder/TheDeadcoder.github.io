@@ -1,0 +1,1 @@
+.figure.svelte-o9rpht{counter-increment:figure}figcaption.svelte-o9rpht:before{content:"Figure " counter(figure) ". ";font-weight:600;color:var(--ink)}

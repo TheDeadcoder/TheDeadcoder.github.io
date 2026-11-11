@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://portfolio.nazmus-sakib-touhid.app/og.png</image:loc>
+      <image:title>Nazmus Sakib | AI/ML Engineer · Lecturer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/workaround-outlives-the-fix</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/audit-the-group-not-the-patch</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/green-checks-broken-clusters</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/seen-but-not-bound</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/skipped-tests-tell-no-tales</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/luck-is-not-skill</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio.nazmus-sakib-touhid.app/blog/when-the-cooling-fails</loc>
+    <lastmod>2026-05-16</lastmod>
+  </url>
+</urlset>

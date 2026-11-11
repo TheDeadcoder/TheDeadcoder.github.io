@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.nazmus-sakib-touhid.app/sitemap.xml
